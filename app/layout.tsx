@@ -12,9 +12,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Bobby Becker | AI Research & Full-Stack Engineer',
-  description: 'Portfolio of Bobby Becker, featuring AI research, full-stack development projects, and professional experiences',
+  description: 'Portfolio of Bobby Becker, featuring AI research, full-stack development projects, and professional experience.',
 }
 
 export default function RootLayout({
