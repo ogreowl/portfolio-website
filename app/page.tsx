@@ -146,7 +146,7 @@ export default function Home() {
                     1000,
                   ]}
                   wrapper="span"
-                  speed={200}
+                  speed={1}
                   repeat={Infinity}
                   className="font-mono"
                 />
