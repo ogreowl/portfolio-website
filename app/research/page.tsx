@@ -36,7 +36,7 @@ export default function PhilosophyResearch() {
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
               Our interactive tool allows users to explore these philosophical networks, choosing a philosopher 
               to display who they commonly reference and who references them—with the ability to sort references 
-              by topic (e.g., 'ethics' or 'metaphysics'). The project reveals distinct network structures among 
+              by topic (e.g., &apos;ethics&apos; or &apos;metaphysics&apos;). The project reveals distinct network structures among 
               philosophical traditions, supporting traditional understandings of intellectual lineages while 
               challenging others.
             </p>
@@ -82,7 +82,7 @@ export default function PhilosophyResearch() {
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
               Using Principal Component Analysis and Latent Dirichlet Allocation, I visualized relationships 
               between philosophical concepts and texts. This led to the development of a search application for 
-              Plato's dialogues, independently discovering an approach similar to Retrieval Augmented Generation. 
+              Plato&apos;s dialogues, independently discovering an approach similar to Retrieval Augmented Generation. 
               This work later influenced the development of a semantic search engine at Advice Company.
             </p>
           </div>
@@ -110,7 +110,7 @@ export default function PhilosophyResearch() {
             <p className="text-gray-300 text-lg leading-relaxed mb-4">
               Working with Professor Alireza Shirvani, I explored patterns in LLM outputs through quantitative 
               analysis. Using the OpenAI API, I generated and analyzed 500+ responses to understand how LLMs model 
-              and represent knowledge domains. Recently, I've been conducting preliminary experiments and reading
+              and represent knowledge domains. Recently, I&apos;ve been conducting preliminary experiments and reading
               to explore re-approaching this project with Aron Culotta as a way to systematically measure 
               how different large language models represent history.
             </p>

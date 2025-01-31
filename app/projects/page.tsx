@@ -42,13 +42,13 @@ export default function Projects() {
 
           <div className="prose prose-invert max-w-none mb-8">
             <p className="text-gray-300 text-lg leading-relaxed mb-4">
-              At Advice Company, I re-engineered the company's search system for attorneys to find expert witnesses. To do this, I first
+              At Advice Company, I re-engineered the company&apos;s search system for attorneys to find expert witnesses. To do this, I first
               created a script to systematically search through our database and create LLM summaries of each expert witness. Then, I embedded these summaries using
               a BERT model, and created a system to match these precomputed vectors with the embedding of a user query.  
             </p>
             <p className="text-gray-300 text-lg leading-relaxed mb-4">
               I was able to deploy this system as an API endpoint through Docker and Google Cloud, and designed the front-end interface to integrate it onto the website.
-               For the last few months, I've been monitoring the system, making adjustments based on user feedback, and improving its efficiency. The service is now live 
+               For the last few months, I&apos;ve been monitoring the system, making adjustments based on user feedback, and improving its efficiency. The service is now live 
                to 500+ high-paying clients on ExpertPages.com, an online directory for expert witnesses.
             </p>
           </div>
@@ -163,12 +163,12 @@ export default function Projects() {
               of predicting player ranking through an interpretable algorithm.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
-            The model considers three key features: opponent skill level, game outcome, and opening move. As an example, when predicting a player's ranking who won 
+            The model considers three key features: opponent skill level, game outcome, and opening move. As an example, when predicting a player&apos;s ranking who won 
             with a d4 opening against a 1500-rated opponent, the model first filters for games with matching outcomes and openings, 
             then identifies the five most similar games based on opponent rating, calculating a weighted average to make its prediction.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
-            The model achieved an extremely high-performance, with an average median error rate of 8.2 ELO (less than 1% of the player's true rating). 
+            The model achieved an extremely high-performance, with an average median error rate of 8.2 ELO (less than 1% of the player&apos;s true rating). 
             The mean error rate was, by contrast, around 82 ELO points, which indicates that the KNN struggles with outliers.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">

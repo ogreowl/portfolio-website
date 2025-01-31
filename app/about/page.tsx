@@ -81,16 +81,16 @@ export default function About() {
           Hello Visitors!
           </p>
           <p className="text-gray-300 mb-4">
-            Welcome to my portfolio! I'm currently a graduate student at Tulane University studying computer science and am looking for opportunities in AI research, development, and engineering. This website aims to give some background on my experiences.
+            Welcome to my portfolio! I&apos;m currently a graduate student at Tulane University studying computer science and am looking for opportunities in AI research, development, and engineering. This website aims to give some background on my experiences.
           </p>
           <p className="text-gray-300 mb-4">
-            I currently serve as a software engineer for Advice Company, a public benefit corporation which provides legal resources. Most recently, I created a <a href="https://www.expertpages.com/ai-expert-finder" className="text-blue-400 hover:text-blue-300 transition">BERT-based semantic search engine</a> that helps attorneys find expert witnesses. I programmed the engine's backend in Python with Huggingface, deployed it through Dockerfile & Google Cloud, and integrated it with Javascript & HTML.
+            I currently serve as a software engineer for Advice Company, a public benefit corporation which provides legal resources. Most recently, I created a <a href="https://www.expertpages.com/ai-expert-finder" className="text-blue-400 hover:text-blue-300 transition">BERT-based semantic search engine</a> that helps attorneys find expert witnesses. I programmed the engine&apos;s backend in Python with Huggingface, deployed it through Dockerfile & Google Cloud, and integrated it with Javascript & HTML.
           </p>
           <p className="text-gray-300 mb-4">
-            I am also working with Professor Aron Culotta in applying natural language processing to analyze philosophical texts. This last semester, I created an <a href="https://ogreowl.github.io/PhilBERT/" className="text-blue-400 hover:text-blue-300 transition">interactive tool to visualize the reference networks</a> across over 1,076 texts, employing transformer-based embeddings to classify references by topic. In previous semesters, I have worked on visualizing philosophical concepts in embedding space and designing RAG systems around Plato's works.
+            I am also working with Professor Aron Culotta in applying natural language processing to analyze philosophical texts. This last semester, I created an <a href="https://ogreowl.github.io/PhilBERT/" className="text-blue-400 hover:text-blue-300 transition">interactive tool to visualize the reference networks</a> across over 1,076 texts, employing transformer-based embeddings to classify references by topic. In previous semesters, I have worked on visualizing philosophical concepts in embedding space and designing RAG systems around Plato&apos;s works.
           </p>
           <p className="text-gray-300 mb-2">
-            I also developed several other projects involving machine learning, AI, and data science throughout my Master's program. These include:
+            I also developed several other projects involving machine learning, AI, and data science throughout my Master&apos;s program. These include:
           </p>
           <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4 mb-4">
             <li><a href="https://bobbybecker2001.com/b-factor-prediction/" className="text-blue-400 hover:text-blue-300 transition">Using Deep Learning to Predict Amino Acid B-Factors Via Protein Sequences</a></li>
@@ -102,7 +102,7 @@ export default function About() {
         <div className="space-y-8">
           <div className="space-y-4">
             <p className="text-gray-300">
-              In addition, since the Fall of 2022, I founded and have served as the president & editor for <a href="https://collegecontemporary.com/" className="text-blue-400 hover:text-blue-300 transition">The College Contemporary</a>, an intercollegiate magazine which publishes perspectives on society, philosophy, and technology. We've published 80+ essays from contributors from over 40 different colleges, including graduate writers from top programs and former editors from leading student newspapers. Through Google Ad Grants, SEO, and digital marketing campaigns, we've reached over <a href="https://bobbybecker2001.com/the-college-contemporary/" className="text-blue-400 hover:text-blue-300 transition">200,000 unique website visitors</a> since our founding.
+              In addition, since the Fall of 2022, I founded and have served as the president & editor for <a href="https://collegecontemporary.com/" className="text-blue-400 hover:text-blue-300 transition">The College Contemporary</a>, an intercollegiate magazine which publishes perspectives on society, philosophy, and technology. We&apos;ve published 80+ essays from contributors from over 40 different colleges, including graduate writers from top programs and former editors from leading student newspapers. Through Google Ad Grants, SEO, and digital marketing campaigns, we&apos;ve reached over <a href="https://bobbybecker2001.com/the-college-contemporary/" className="text-blue-400 hover:text-blue-300 transition">200,000 unique website visitors</a> since our founding.
             </p>
           </div>
 

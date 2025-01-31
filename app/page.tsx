@@ -248,7 +248,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-start space-x-3">
                   <span className="text-blue-400 mt-1">→</span>
-                  <span className="text-gray-300">Created novel interactive tool to visualize & analyze reference networks between authors</span>
+                  <span className="text-gray-300">Created novel interactive tool to visualize &amp; analyze reference networks between authors</span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <span className="text-blue-400 mt-1">→</span>
@@ -366,7 +366,7 @@ export default function Home() {
           <div className="h-1 w-12 bg-blue-500 mx-auto mb-6"></div>
           <p className="text-gray-400 text-center max-w-2xl mx-auto mb-12">
             Founded intercollegiate magazine to publish high-quality original perspectives from college writers across the U.S. Since 2022, I have 
-            been serving as the President & Editor, coordinating across editorial & design teams, and leading marketing & fundraising efforts. 
+            been serving as the President &amp; Editor, coordinating across editorial &amp; design teams, and leading marketing &amp; fundraising efforts. 
           </p>
           <div className="flex justify-center gap-4 mb-12">
             <a 
