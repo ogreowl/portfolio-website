@@ -1,5 +1,5 @@
 'use client'
-// src/app/page.tsx
+// app/page.tsx
 import { ArrowDown, Dna, Crown, Bot } from 'lucide-react'
 import { useCallback } from 'react'
 import type { Container, Engine } from "tsparticles-engine";
@@ -95,7 +95,7 @@ export default function Home() {
               Bobby Becker
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="#" className="hover:text-blue-400 transition">Home</a>
+              <Link href="/" className="hover:text-blue-400 transition">Home</Link>
               <Link href="/research" className="hover:text-blue-400 transition">Research</Link>
               <Link href="/projects" className="hover:text-blue-400 transition">Projects</Link>
             </div>
@@ -559,13 +559,12 @@ export default function Home() {
                 </a>
               </li>
               <li>
-                <a 
+                <Link 
                   href="/resume.pdf" 
-                  target="_blank"
                   className="text-gray-400 hover:text-blue-400 transition-colors"
                 >
                   Resume
-                </a>
+                </Link>
               </li>
               <li>
                 <a 

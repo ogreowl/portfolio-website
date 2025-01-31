@@ -1,5 +1,6 @@
-// src/app/research/philosophy/page.tsx
+// app/research/page.tsx
 'use client'
+import Link from 'next/link'
 
 export default function PhilosophyResearch() {
   return (
@@ -12,9 +13,9 @@ export default function PhilosophyResearch() {
               Research
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="/" className="hover:text-blue-400 transition">Home</a>
-              <a href="/research" className="text-blue-400 transition">Research</a>
-              <a href="/projects" className="hover:text-blue-400 transition">Projects</a>
+              <Link href="/" className="hover:text-blue-400 transition">Home</Link>
+              <Link href="/research" className="text-blue-400 transition">Research</Link>
+              <Link href="/projects" className="hover:text-blue-400 transition">Projects</Link>
             </nav>
           </div>
         </div>
@@ -158,13 +159,12 @@ export default function PhilosophyResearch() {
                 </a>
               </li>
               <li>
-                <a 
+                <Link 
                   href="/resume.pdf" 
-                  target="_blank"
                   className="text-gray-400 hover:text-blue-400 transition-colors"
                 >
                   Resume
-                </a>
+                </Link>
               </li>
               <li>
                 <a 
