@@ -20,7 +20,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#1a1a1a] text-white relative flex flex-col" suppressHydrationWarning>
+    <div className="min-h-screen bg-[#000000] text-white relative flex flex-col" suppressHydrationWarning>
       <Particles
         className="absolute inset-0 pointer-events-none"
         id="tsparticles"
