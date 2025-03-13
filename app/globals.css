@@ -9,7 +9,7 @@
   }
   
   body {
-    @apply bg-[#1a1a1a] text-white;
+    @apply bg-[#000000] text-white;
   }
 
   /* Custom scrollbar */
@@ -18,7 +18,7 @@
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-[#1a1a1a];
+    @apply bg-[#000000];
   }
 
   ::-webkit-scrollbar-thumb {
