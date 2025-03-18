@@ -7,7 +7,7 @@ export default function PhilosophyResearch() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <div className="min-h-screen bg-[#1a1a1a] text-white">
+    <div className="min-h-screen bg-[#000000] text-white">
       {/* Header */}
       <nav className="fixed w-full top-0 bg-[#1a1a1a]/80 backdrop-blur-sm z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
