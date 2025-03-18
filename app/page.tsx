@@ -196,7 +196,7 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="bg-[#2a2a2a] rounded-lg p-8 font-mono">
+            <div className="bg-[#2a2a2a]/40 p-8 font-mono">
               <div className="text-green-400 mb-4">
                 <TypeAnimation
                   sequence={[
@@ -253,7 +253,7 @@ export default function Home() {
           
           <div className="space-y-8">
             {/* Software Engineer Card */}
-            <div className="bg-[#2a2a2a] rounded-xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer">
+            <div className="bg-[#2a2a2a]/40 rounded-xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer">
               <div className="flex flex-wrap gap-2 mb-4 sm:absolute sm:top-8 sm:right-8">
                 <span className="px-4 py-1 bg-[#3a3a3a] rounded-full text-sm">
                   Part-Time
@@ -292,7 +292,7 @@ export default function Home() {
             </div>
 
             {/* Research Assistant Card */}
-            <div className="bg-[#2a2a2a] rounded-xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer">
+            <div className="bg-[#2a2a2a]/40 rounded-xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer">
               <div className="flex flex-wrap gap-2 mb-4 sm:absolute sm:top-8 sm:right-8">
                 <Link href="/research" className="px-4 py-1 bg-[#3a3a3a] rounded-full text-sm hover:bg-blue-500 transition-colors">
                   See More
@@ -327,14 +327,14 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20">
+      <section id="projects" className="bg-[#000000] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-4">Featured Projects</h2>
           <div className="h-1 w-12 bg-blue-500 mx-auto mb-12"></div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Amino Acid Project */}
-            <div className="group rounded-xl overflow-hidden bg-[#2a2a2a] shadow-xl 
+            <div className="group rounded-xl overflow-hidden bg-[#2a2a2a]/40 shadow-xl 
                           transition-all duration-300 
                           hover:scale-[1.02] hover:-translate-y-2 
                           hover:shadow-2xl hover:shadow-blue-500/20 
@@ -363,7 +363,7 @@ export default function Home() {
               </div>
             </div>
             {/* Chess Analysis Project */}
-            <div className="group rounded-xl overflow-hidden bg-[#2a2a2a] shadow-xl 
+            <div className="group rounded-xl overflow-hidden bg-[#2a2a2a]/40 shadow-xl 
                           transition-all duration-300 
                           hover:scale-[1.02] hover:-translate-y-2 
                           hover:shadow-2xl hover:shadow-green-500/20 
@@ -393,7 +393,7 @@ export default function Home() {
             </div>
 
             {/* Unity Game Project */}
-            <div className="group rounded-xl overflow-hidden bg-[#2a2a2a] shadow-xl 
+            <div className="group rounded-xl overflow-hidden bg-[#2a2a2a]/40 shadow-xl 
                           transition-all duration-300 
                           hover:scale-[1.02] hover:-translate-y-2 
                           hover:shadow-2xl hover:shadow-purple-500/20 
@@ -455,7 +455,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Left Column - Stats and Overview */}
             <div className="space-y-6">
-              <div className="bg-[#2a2a2a] rounded-xl p-8">
+              <div className="bg-[#2a2a2a]/40 rounded-xl p-8">
                 
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-[#1f1f1f] rounded-lg p-6 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/10">
@@ -482,7 +482,7 @@ export default function Home() {
               </div>
 
               {/* Key Achievements */}
-              <div className="bg-[#2a2a2a] rounded-xl p-8">
+              <div className="bg-[#2a2a2a]/40 rounded-xl p-8">
                 <h3 className="text-xl font-semibold mb-6">Achievements</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start space-x-3">
@@ -512,7 +512,7 @@ export default function Home() {
             {/* Right Column */}
             <div className="space-y-6">
               {/* Content Categories */}
-              <div className="bg-[#2a2a2a] rounded-xl p-8">
+              <div className="bg-[#2a2a2a]/40 rounded-xl p-8">
                 <h3 className="text-xl font-semibold mb-6">Content Breakdown (by articles published)</h3>
                 
                 <div className="space-y-6">
@@ -579,7 +579,7 @@ export default function Home() {
               </div>
 
               {/* Editorial Process */}
-              <div className="bg-[#2a2a2a] rounded-xl p-8">
+              <div className="bg-[#2a2a2a]/40 rounded-xl p-8">
                 <h3 className="text-xl font-semibold mb-6">Pretty Good Pieces</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start space-x-3">
