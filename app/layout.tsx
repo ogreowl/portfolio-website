@@ -27,7 +27,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="bg-[#000000] sticky top-0 z-50 w-full border-b border-[#333333]">
+        <header className="bg-white sticky top-0 z-50 w-full border-b border-gray-200">
           {children}
         </header>
       </body>

@@ -253,72 +253,72 @@ export default function Home() {
           
           <div className="space-y-8">
             {/* Software Engineer Card */}
-            <div className="bg-gray-50 rounded-xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer">
+            <div className="bg-white rounded-xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer">
               <div className="flex flex-wrap gap-2 mb-4 sm:absolute sm:top-8 sm:right-8">
-                <span className="px-4 py-1 bg-[#3a3a3a] rounded-full text-sm">
+                <span className="px-4 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
                   Part-Time
                 </span>
-                <Link href="/projects" className="px-4 py-1 bg-[#3a3a3a] rounded-full text-sm hover:bg-blue-500 transition-colors">
+                <Link href="/projects" className="px-4 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-blue-500 hover:text-white transition-colors">
                   See More
                 </Link>
               </div>
-              <h3 className="text-2xl text-blue-400 font-semibold mb-2">
+              <h3 className="text-2xl text-blue-600 font-semibold mb-2">
                 Software Engineer
               </h3>
-              <h4 className="text-gray-400 text-lg mb-6">
+              <h4 className="text-gray-600 text-lg mb-6">
                 Advice Company
               </h4>
-              <p className="text-gray-300 mb-4">
-              Managed & integrated features across 8 websites which provide legal resources. Most recently, led the development of a BERT-based semantic search engine for legal professionals:
+              <p className="text-gray-700 mb-4">
+                Managed & integrated features across 8 websites which provide legal resources. Most recently, led the development of a BERT-based semantic search engine for legal professionals:
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-400 mt-1">→</span>
-                  <span className="text-gray-300">Implemented backend using Python & Huggingface transformers</span>
+                  <span className="text-blue-600 mt-1">→</span>
+                  <span className="text-gray-700">Implemented backend using Python & Huggingface transformers</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-400 mt-1">→</span>
-                  <span className="text-gray-300">Deployed as API endpoint through Docker & Google Cloud Platform</span>
+                  <span className="text-blue-600 mt-1">→</span>
+                  <span className="text-gray-700">Deployed as API endpoint through Docker & Google Cloud Platform</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-400 mt-1">→</span>
-                  <span className="text-gray-300">Integrated to Frontend through JavaScript & HTML</span>
+                  <span className="text-blue-600 mt-1">→</span>
+                  <span className="text-gray-700">Integrated to Frontend through JavaScript & HTML</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-400 mt-1">→</span>
-                  <span className="text-gray-300">Launched to 500+ high-paying clients</span>
+                  <span className="text-blue-600 mt-1">→</span>
+                  <span className="text-gray-700">Launched to 500+ high-paying clients</span>
                 </li>
               </ul>
             </div>
 
             {/* Research Assistant Card */}
-            <div className="bg-gray-50 rounded-xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer">
+            <div className="bg-white rounded-xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer">
               <div className="flex flex-wrap gap-2 mb-4 sm:absolute sm:top-8 sm:right-8">
-                <Link href="/research" className="px-4 py-1 bg-[#3a3a3a] rounded-full text-sm hover:bg-blue-500 transition-colors">
+                <Link href="/research" className="px-4 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-blue-500 hover:text-white transition-colors">
                   See More
                 </Link>
               </div>
-              <h3 className="text-2xl text-blue-400 font-semibold mb-2">
+              <h3 className="text-2xl text-blue-600 font-semibold mb-2">
                 Research Assistant
               </h3>
-              <h4 className="text-gray-400 text-lg mb-6">
+              <h4 className="text-gray-600 text-lg mb-6">
                 Tulane University
               </h4>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-700 mb-4">
                 Working with Professor Aron Culotta on research publications:
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-400 mt-1">→</span>
-                  <span className="text-gray-300">Developed NLP pipeline to analyze 109,692 references across 1,076 philosophical texts</span>
+                  <span className="text-blue-600 mt-1">→</span>
+                  <span className="text-gray-700">Developed NLP pipeline to analyze 109,692 references across 1,076 philosophical texts</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-400 mt-1">→</span>
-                  <span className="text-gray-300">Created novel interactive tool to visualize &amp; analyze reference networks between authors</span>
+                  <span className="text-blue-600 mt-1">→</span>
+                  <span className="text-gray-700">Created novel interactive tool to visualize & analyze reference networks between authors</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-400 mt-1">→</span>
-                  <span className="text-gray-300">Employed transformer-based models to classify references by topic</span>
+                  <span className="text-blue-600 mt-1">→</span>
+                  <span className="text-gray-700">Employed transformer-based models to classify references by topic</span>
                 </li>
               </ul>
             </div>
@@ -332,61 +332,60 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-center mb-4">Featured Projects</h2>
           <div className="h-1 w-12 bg-blue-500 mx-auto mb-12"></div>
 
-          {/* First Row - 3 Projects */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          {/* Single Row - 5 Projects */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {/* Amino Acid Project */}
-            <div className="group rounded-xl overflow-hidden bg-[#2a2a2a]/40 shadow-xl 
+            <div className="group rounded-xl overflow-hidden bg-white shadow-lg 
                           transition-all duration-300 
                           hover:scale-[1.02] hover:-translate-y-2 
                           hover:shadow-2xl hover:shadow-blue-500/20 
                           cursor-pointer">
-              <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center p-8 group-hover:scale-105 transition-transform duration-300">
-                <Dna className="w-16 h-16 text-white group-hover:rotate-12 transition-transform duration-300" />
+              <div className="h-36 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300">
+                <Dna className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
-                  Amino Acid B-Factors Prediction
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+                  Amino Acid Prediction
                 </h3>
-                <p className="text-gray-400 mb-4">
-                  Deep learning model to predict protein B-factors from amino acid sequences
+                <p className="text-gray-600 text-sm mb-3">
+                  Deep learning model for protein B-factors prediction
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-3 py-1 rounded-full text-sm bg-blue-400/20 text-blue-400 group-hover:bg-blue-400/30 transition-colors">Deep Learning</span>
-                  <span className="px-3 py-1 rounded-full text-sm bg-purple-400/20 text-purple-400 group-hover:bg-purple-400/30 transition-colors">Python</span>
-                  <span className="px-3 py-1 rounded-full text-sm bg-green-400/20 text-green-400 group-hover:bg-green-400/30 transition-colors">BioPython</span>
+                <div className="flex flex-wrap gap-1 mb-3">
+                  <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">Deep Learning</span>
+                  <span className="px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-600">Python</span>
                 </div>
-                <a href="/projects#protein-factors" className="text-blue-400 hover:text-blue-500 font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
+                <a href="/projects#protein-factors" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
                   View Project
-                  <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                   </svg>
                 </a>
               </div>
             </div>
+
             {/* Chess Analysis Project */}
-            <div className="group rounded-xl overflow-hidden bg-[#2a2a2a]/40 shadow-xl 
+            <div className="group rounded-xl overflow-hidden bg-white shadow-lg 
                           transition-all duration-300 
                           hover:scale-[1.02] hover:-translate-y-2 
                           hover:shadow-2xl hover:shadow-green-500/20 
                           cursor-pointer">
-              <div className="h-48 bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center p-8 group-hover:scale-105 transition-transform duration-300">
-                <Crown className="w-16 h-16 text-white group-hover:rotate-12 transition-transform duration-300" />
+              <div className="h-36 bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300">
+                <Crown className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-green-400 transition-colors">
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-green-600 transition-colors">
                   Chess Games Analysis
                 </h3>
-                <p className="text-gray-400 mb-4">
+                <p className="text-gray-600 text-sm mb-3">
                   Machine learning analysis of 40,000+ chess games using advanced analytics
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-3 py-1 rounded-full text-sm bg-blue-400/20 text-blue-400 group-hover:bg-blue-400/30 transition-colors">Machine Learning</span>
-                  <span className="px-3 py-1 rounded-full text-sm bg-purple-400/20 text-purple-400 group-hover:bg-purple-400/30 transition-colors">Data Analysis</span>
-                  <span className="px-3 py-1 rounded-full text-sm bg-green-400/20 text-green-400 group-hover:bg-green-400/30 transition-colors">Python</span>
+                <div className="flex flex-wrap gap-1 mb-3">
+                  <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">Machine Learning</span>
+                  <span className="px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-600">Data Analysis</span>
                 </div>
-                <a href="/projects#chess-analysis" className="text-blue-400 hover:text-blue-500 font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
+                <a href="/projects#chess-analysis" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
                   View Project
-                  <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                   </svg>
                 </a>
@@ -394,63 +393,57 @@ export default function Home() {
             </div>
 
             {/* Unity Game Project */}
-            <div className="group rounded-xl overflow-hidden bg-[#2a2a2a]/40 shadow-xl 
+            <div className="group rounded-xl overflow-hidden bg-white shadow-lg 
                           transition-all duration-300 
                           hover:scale-[1.02] hover:-translate-y-2 
                           hover:shadow-2xl hover:shadow-purple-500/20 
                           cursor-pointer">
-              <div className="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center p-8 group-hover:scale-105 transition-transform duration-300">
-                <Bot className="w-16 h-16 text-white group-hover:rotate-12 transition-transform duration-300" />
+              <div className="h-36 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300">
+                <Bot className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-purple-600 transition-colors">
                   3D Combat Game with LLMs
                 </h3>
-                <p className="text-gray-400 mb-4">
+                <p className="text-gray-600 text-sm mb-3">
                   Unity-based turn-based combat game with integrated language models
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-3 py-1 rounded-full text-sm bg-blue-400/20 text-blue-400 group-hover:bg-blue-400/30 transition-colors">Unity</span>
-                  <span className="px-3 py-1 rounded-full text-sm bg-purple-400/20 text-purple-400 group-hover:bg-purple-400/30 transition-colors">C#</span>
-                  <span className="px-3 py-1 rounded-full text-sm bg-green-400/20 text-green-400 group-hover:bg-green-400/30 transition-colors">LLM Integration</span>
+                <div className="flex flex-wrap gap-1 mb-3">
+                  <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">Unity</span>
+                  <span className="px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-600">C#</span>
                 </div>
-                <a href="/projects#unity-game" className="text-blue-400 hover:text-blue-500 font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
+                <a href="/projects#unity-game" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
                   View Project
-                  <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                   </svg>
                 </a>
               </div>
             </div>
-          </div>
 
-          {/* Second Row - 2 Projects */}
-          {/* Second Row - 2 Projects */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[66%] mx-auto">
-            {/* SelfHelp AI iOS App */}
-            <div className="group rounded-xl overflow-hidden bg-[#2a2a2a]/40 shadow-xl 
+            {/* SelfHelp AI */}
+            <div className="group rounded-xl overflow-hidden bg-white shadow-lg 
                           transition-all duration-300 
                           hover:scale-[1.02] hover:-translate-y-2 
-                          hover:shadow-2xl hover:shadow-yellow-500/20 
+                          hover:shadow-2xl hover:shadow-pink-500/20 
                           cursor-pointer">
-              <div className="h-48 bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center p-8 group-hover:scale-105 transition-transform duration-300">
-                <Bot className="w-16 h-16 text-white group-hover:rotate-12 transition-transform duration-300" />
+              <div className="h-36 bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300">
+                <Bot className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-pink-400 transition-colors">
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-pink-600 transition-colors">
                   SelfHelp AI
                 </h3>
-                <p className="text-gray-400 mb-4">
+                <p className="text-gray-600 text-sm mb-3">
                   iOS app providing personalized AI-powered mental wellness support and journaling
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-3 py-1 rounded-full text-sm bg-blue-400/20 text-blue-400 group-hover:bg-blue-400/30 transition-colors">Swift</span>
-                  <span className="px-3 py-1 rounded-full text-sm bg-purple-400/20 text-purple-400 group-hover:bg-purple-400/30 transition-colors">SwiftUI</span>
-                  <span className="px-3 py-1 rounded-full text-sm bg-green-400/20 text-green-400 group-hover:bg-green-400/30 transition-colors">OpenAI API</span>
+                <div className="flex flex-wrap gap-1 mb-3">
+                  <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">Swift</span>
+                  <span className="px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-600">SwiftUI</span>
                 </div>
-                <a href="/projects#selfhelp-ai" className="text-blue-400 hover:text-blue-500 font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
+                <a href="/projects#selfhelp-ai" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
                   View Project
-                  <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                   </svg>
                 </a>
@@ -458,29 +451,28 @@ export default function Home() {
             </div>
 
             {/* Voice-Controlled Robot */}
-            <div className="group rounded-xl overflow-hidden bg-[#2a2a2a]/40 shadow-xl 
+            <div className="group rounded-xl overflow-hidden bg-white shadow-lg 
                           transition-all duration-300 
                           hover:scale-[1.02] hover:-translate-y-2 
-                          hover:shadow-2xl hover:shadow-teal-500/20 
+                          hover:shadow-2xl hover:shadow-violet-500/20 
                           cursor-pointer">
-              <div className="h-48 bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center p-8 group-hover:scale-105 transition-transform duration-300">
-                <Bot className="w-16 h-16 text-white group-hover:rotate-12 transition-transform duration-300" />
+              <div className="h-36 bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300">
+                <Bot className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-violet-400 transition-colors">
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-violet-600 transition-colors">
                   Voice-Controlled Robot
                 </h3>
-                <p className="text-gray-400 mb-4">
+                <p className="text-gray-600 text-sm mb-3">
                   Raspberry Pi-powered robot that responds to voice commands using natural language processing
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-3 py-1 rounded-full text-sm bg-blue-400/20 text-blue-400 group-hover:bg-blue-400/30 transition-colors">Python</span>
-                  <span className="px-3 py-1 rounded-full text-sm bg-purple-400/20 text-purple-400 group-hover:bg-purple-400/30 transition-colors">Raspberry Pi</span>
-                  <span className="px-3 py-1 rounded-full text-sm bg-green-400/20 text-green-400 group-hover:bg-green-400/30 transition-colors">Speech Recognition</span>
+                <div className="flex flex-wrap gap-1 mb-3">
+                  <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">Python</span>
+                  <span className="px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-600">Raspberry Pi</span>
                 </div>
-                <a href="/projects#voice-robot" className="text-blue-400 hover:text-blue-500 font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
+                <a href="/projects#voice-robot" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
                   View Project
-                  <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                   </svg>
                 </a>
@@ -495,7 +487,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-4">The College Contemporary</h2>
           <div className="h-1 w-12 bg-blue-500 mx-auto mb-6"></div>
-          <p className="text-gray-400 text-center max-w-2xl mx-auto mb-12">
+          <p className="text-gray-700 text-center max-w-2xl mx-auto mb-12">
             Founded intercollegiate magazine to publish high-quality original perspectives from college writers across the U.S. Since 2022, I have 
             been serving as the President &amp; Editor, coordinating across editorial &amp; design teams, and leading marketing &amp; fundraising efforts. 
           </p>
@@ -504,7 +496,7 @@ export default function Home() {
               href="https://collegecontemporary.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition"
+              className="px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
             >
               View Website
             </a>
@@ -512,7 +504,7 @@ export default function Home() {
               href="https://bobbybecker2001.com/the-college-contemporary/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="px-6 py-3 border border-blue-400 text-blue-400 rounded-full hover:bg-blue-400/10 transition"
+              className="px-6 py-3 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 transition"
             >
               Read More
             </a>
@@ -520,55 +512,53 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Left Column - Stats and Overview */}
             <div className="space-y-6">
-              <div className="bg-[#2a2a2a]/40 rounded-xl p-8">
-                
+              <div className="bg-white rounded-xl p-8 shadow-lg">
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-[#1f1f1f] rounded-lg p-6 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/10">
-                    <div className="text-4xl font-bold text-blue-400 mb-2">100+</div>
-                    <div className="text-gray-400">Published Works</div>
+                  <div className="bg-gray-50 rounded-lg p-6 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/10">
+                    <div className="text-4xl font-bold text-blue-600 mb-2">100+</div>
+                    <div className="text-gray-600">Published Works</div>
                   </div>
                   
-                  <div className="bg-[#1f1f1f] rounded-lg p-6 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/10">
-                    <div className="text-4xl font-bold text-blue-400 mb-2">250k</div>
-                    <div className="text-gray-400">Total Page Views</div>
+                  <div className="bg-gray-50 rounded-lg p-6 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/10">
+                    <div className="text-4xl font-bold text-blue-600 mb-2">250k</div>
+                    <div className="text-gray-600">Total Page Views</div>
                   </div>
                   
-                  <div className="bg-[#1f1f1f] rounded-lg p-6 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/10">
-                    <div className="text-4xl font-bold text-blue-400 mb-2">50+</div>
-                    <div className="text-gray-400">Contributors</div>
+                  <div className="bg-gray-50 rounded-lg p-6 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/10">
+                    <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
+                    <div className="text-gray-600">Contributors</div>
                   </div>
                   
-                  <div className="bg-[#1f1f1f] rounded-lg p-6 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/10">
-                    <div className="text-4xl font-bold text-blue-400 mb-2">$5k</div>
-                    <div className="text-gray-400">Funding Awarded</div>
+                  <div className="bg-gray-50 rounded-lg p-6 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/10">
+                    <div className="text-4xl font-bold text-blue-600 mb-2">$5k</div>
+                    <div className="text-gray-600">Funding Awarded</div>
                   </div>
                 </div>
-
               </div>
 
               {/* Key Achievements */}
-              <div className="bg-[#2a2a2a]/40 rounded-xl p-8">
-                <h3 className="text-xl font-semibold mb-6">Achievements</h3>
+              <div className="bg-white rounded-xl p-8 shadow-lg">
+                <h3 className="text-xl font-semibold mb-6 text-gray-800">Achievements</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start space-x-3">
-                    <span className="text-blue-400 mt-1">→</span>
-                    <span className="text-gray-300">Hosted speaker series with 150+ person live audience</span>
+                    <span className="text-blue-600 mt-1">→</span>
+                    <span className="text-gray-700">Hosted speaker series with 150+ person live audience</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <span className="text-blue-400 mt-1">→</span>
-                    <span className="text-gray-300">Twice Received Alvarez Spark Innovation Award</span>
+                    <span className="text-blue-600 mt-1">→</span>
+                    <span className="text-gray-700">Twice Received Alvarez Spark Innovation Award</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <span className="text-blue-400 mt-1">→</span>
-                    <span className="text-gray-300">Managed 10k monthly advertising budget via Google Ad Grants for Nonprofits</span>
+                    <span className="text-blue-600 mt-1">→</span>
+                    <span className="text-gray-700">Managed 10k monthly advertising budget via Google Ad Grants for Nonprofits</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <span className="text-blue-400 mt-1">→</span>
-                    <span className="text-gray-300">Independently traveled to Ukraine to conduct original reporting</span>
+                    <span className="text-blue-600 mt-1">→</span>
+                    <span className="text-gray-700">Independently traveled to Ukraine to conduct original reporting</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <span className="text-blue-400 mt-1">→</span>
-                    <span className="text-gray-300">Published work online, through print editions, and Spotify</span>
+                    <span className="text-blue-600 mt-1">→</span>
+                    <span className="text-gray-700">Published work online, through print editions, and Spotify</span>
                   </li>
                 </ul>
               </div>
@@ -577,87 +567,87 @@ export default function Home() {
             {/* Right Column */}
             <div className="space-y-6">
               {/* Content Categories */}
-              <div className="bg-[#2a2a2a]/40 rounded-xl p-8">
-                <h3 className="text-xl font-semibold mb-6">Content Breakdown (by articles published)</h3>
+              <div className="bg-white rounded-xl p-8 shadow-lg">
+                <h3 className="text-xl font-semibold mb-6 text-gray-800">Content Breakdown (by articles published)</h3>
                 
                 <div className="space-y-6">
                   <div className="space-y-2">
-                    <div className="flex justify-between text-sm">
+                    <div className="flex justify-between text-sm text-gray-700">
                       <span>Society</span>
                       <span>22</span>
                     </div>
-                    <div className="h-2 bg-[#1f1f1f] rounded-full">
-                      <div className="h-full w-[92%] bg-blue-400 rounded-full transition-all duration-500"></div>
+                    <div className="h-2 bg-gray-100 rounded-full">
+                      <div className="h-full w-[92%] bg-blue-500 rounded-full transition-all duration-500"></div>
                     </div>
                   </div>
                   
                   <div className="space-y-2">
-                    <div className="flex justify-between text-sm">
+                    <div className="flex justify-between text-sm text-gray-700">
                       <span>Philosophy</span>
                       <span>14</span>
                     </div>
-                    <div className="h-2 bg-[#1f1f1f] rounded-full">
-                      <div className="h-full w-[58%] bg-purple-400 rounded-full transition-all duration-500"></div>
+                    <div className="h-2 bg-gray-100 rounded-full">
+                      <div className="h-full w-[58%] bg-purple-500 rounded-full transition-all duration-500"></div>
                     </div>
                   </div>
                   
                   <div className="space-y-2">
-                    <div className="flex justify-between text-sm">
+                    <div className="flex justify-between text-sm text-gray-700">
                       <span>Technology</span>
                       <span>15</span>
                     </div>
-                    <div className="h-2 bg-[#1f1f1f] rounded-full">
-                      <div className="h-full w-[63%] bg-green-400 rounded-full transition-all duration-500"></div>
+                    <div className="h-2 bg-gray-100 rounded-full">
+                      <div className="h-full w-[63%] bg-green-500 rounded-full transition-all duration-500"></div>
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <div className="flex justify-between text-sm">
+                    <div className="flex justify-between text-sm text-gray-700">
                       <span>Academia</span>
                       <span>17</span>
                     </div>
-                    <div className="h-2 bg-[#1f1f1f] rounded-full">
-                      <div className="h-full w-[71%] bg-pink-400 rounded-full transition-all duration-500"></div>
+                    <div className="h-2 bg-gray-100 rounded-full">
+                      <div className="h-full w-[71%] bg-pink-500 rounded-full transition-all duration-500"></div>
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <div className="flex justify-between text-sm">
+                    <div className="flex justify-between text-sm text-gray-700">
                       <span>Politics</span>
                       <span>24</span>
                     </div>
-                    <div className="h-2 bg-[#1f1f1f] rounded-full">
-                      <div className="h-full w-[100%] bg-yellow-400 rounded-full transition-all duration-500"></div>
+                    <div className="h-2 bg-gray-100 rounded-full">
+                      <div className="h-full w-[100%] bg-yellow-500 rounded-full transition-all duration-500"></div>
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <div className="flex justify-between text-sm">
+                    <div className="flex justify-between text-sm text-gray-700">
                       <span>Interviews</span>
                       <span>15</span>
                     </div>
-                    <div className="h-2 bg-[#1f1f1f] rounded-full">
-                      <div className="h-full w-[63%] bg-red-400 rounded-full transition-all duration-500"></div>
+                    <div className="h-2 bg-gray-100 rounded-full">
+                      <div className="h-full w-[63%] bg-red-500 rounded-full transition-all duration-500"></div>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Editorial Process */}
-              <div className="bg-[#2a2a2a]/40 rounded-xl p-8">
-                <h3 className="text-xl font-semibold mb-6">Pretty Good Pieces</h3>
+              <div className="bg-white rounded-xl p-8 shadow-lg">
+                <h3 className="text-xl font-semibold mb-6 text-gray-800">Pretty Good Pieces</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start space-x-3">
-                    <span className="text-blue-400 mt-1">→</span>
-                    <span className="text-gray-300">Launched Additional Branch to Focus on Creative Writing</span>
+                    <span className="text-blue-600 mt-1">→</span>
+                    <span className="text-gray-700">Launched Additional Branch to Focus on Creative Writing</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <span className="text-blue-400 mt-1">→</span>
-                    <span className="text-gray-300">Published 50+ pieces of Fiction, Poetry, and Satire</span>
+                    <span className="text-blue-600 mt-1">→</span>
+                    <span className="text-gray-700">Published 50+ pieces of Fiction, Poetry, and Satire</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <span className="text-blue-400 mt-1">→</span>
-                    <span className="text-gray-300">Work with 25+ contributors across 15+ colleges</span>
+                    <span className="text-blue-600 mt-1">→</span>
+                    <span className="text-gray-700">Work with 25+ contributors across 15+ colleges</span>
                   </li>
                 </ul>
               </div>
