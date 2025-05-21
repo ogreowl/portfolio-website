@@ -53,6 +53,14 @@ export default function IOSApp() {
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               Self Help AI - iOS Mobile App
             </h1>
+            <a 
+              href="https://apps.apple.com/us/app/selfhelp-ai/id6742257217" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-blue-600 hover:text-blue-800 mb-6 inline-block"
+            >
+              View on App Store →
+            </a>
           </div>
 
           {/* Project Overview */}
@@ -64,7 +72,7 @@ export default function IOSApp() {
             </p>
 
             {/* Slideshow */}
-            <div className="relative w-full h-[600px] mb-12 rounded-lg overflow-hidden">
+            <div className="relative w-full h-[500px] mb-12 rounded-lg overflow-hidden">
               {slides.map((slide, index) => (
                 <div
                   key={index}

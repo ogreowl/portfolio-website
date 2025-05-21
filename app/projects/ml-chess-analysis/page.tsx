@@ -38,13 +38,10 @@ export default function MLChessAnalysis() {
             <h2 className="text-2xl font-semibold text-gray-900 mt-12 mb-6">Overview</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-700 leading-relaxed mb-6">
-              I analyzed 40,000 chess games, using machine learning & data visualization to find patterns between 
-              player rankings, game outcomes, opening moves, and other variables. I then created a customized K-Nearest Neighbors model 
-              to predict player rankings, achieving a median error rate within 1.5% of a player's true rank. I documented my entire 
-              process on a public GitHub pages tutorial: <a href="https://bobbybecker.github.io/chess-analysis/" target="_blank" rel="noopener noreferrer">https://bobbybecker.github.io/chess-analysis/</a>
+              I analyzed over 40,000 online chess games to explore relationships between player ratings, outcomes, openings, and other variables. After conducting a detailed statistical and visual analysis using Python, Pandas, Matplotlib, and Seaborn, I designed a customized K-Nearest Neighbors (KNN) model to predict a player’s rating based on their opening move, game outcome, and opponent skill level — achieving a median error rate within 1.5% of a player’s true ranking.
             </p>
             <p className="text-gray-700 leading-relaxed mb-6">
-              In addition, I built a Generative Pretrained Transformer to play chess by couninually predicting the next move
+              In addition, I built a Generative Pretrained Transformer to play chess by continually predicting the next move
               within a sequence. I tested its performance against StockFish, the most powerful Chess Engine, in order to 
               illustrate the potential, limitations, and modern approaches of applying attention-based AI architectures 
               to domains currently dominated by traditional deep learning systems.
@@ -53,7 +50,7 @@ export default function MLChessAnalysis() {
             <h2 className="text-2xl font-semibold text-gray-900 mt-12 mb-6">Data Analysis & Predictive Model Implementation</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 leading-relaxed mb-6">
-                I collected two publically available datasets: one of online Chess games, and another of famous games played by Grandmasters.
+                I collected two publicly available datasets: one of online Chess games, and another of famous games played by Grandmasters.
                 In addition, I created a synthetic dataset of Chess games played by Stockfish, the most powerful Chess Engine. These were loaded
                 into a Jupyter Notebook via the Pandas library. 
               </p>

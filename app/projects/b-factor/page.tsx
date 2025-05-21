@@ -192,6 +192,10 @@ export default function BFactorProject() {
               />
             </div>
 
+            <p className="text-gray-700 leading-relaxed mb-6">
+              Special thanks to my partners, Marco Carbullido and Rafael Djamous, for their help with this project, as well as Professor Jihun Hamm and Professor Ramgopal Mettu for their valuable feedback.
+            </p>
+
           </div>
         </div>
       </main>

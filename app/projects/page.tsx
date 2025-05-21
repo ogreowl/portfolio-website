@@ -89,6 +89,53 @@ export default function Projects() {
         </div>
       </nav>
       <main className="max-w-4xl mx-auto px-4 py-12 pt-20">
+        {/* iOS App Project */}
+        <div id="ios-app" className="mb-16">
+          <h1 className="text-4xl font-bold mb-4">Self Help AI - iOS Mobile App</h1>
+          
+          <div className="flex flex-wrap gap-2 mb-8">
+            <span className="px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">React Native</span>
+            <span className="px-4 py-1.5 bg-green-100 text-green-700 rounded-full text-sm font-medium">LLMs</span>
+            <span className="px-4 py-1.5 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">iOS</span>
+            <span className="px-4 py-1.5 bg-red-100 text-red-700 rounded-full text-sm font-medium">API Design</span>
+            <span className="px-4 py-1.5 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">UI/UX</span>
+            <span className="px-4 py-1.5 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">Mobile Dev</span>
+            <span className="px-4 py-1.5 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">TypeScript</span>
+            <span className="px-4 py-1.5 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">JavaScript</span>
+          </div>
+
+          <div className="prose max-w-none mb-8">
+            <p className="text-gray-600 text-lg leading-relaxed mb-4">
+              I developed the full software stack for Self Help AI, an iOS mobile app that integrates user data, 
+              function calling & personalization settings to create a ChatBot experience for the purpose of self-help. 
+              The end product uses ~30k lines of code across 24 files, and has amassed over 200 App Store downloads since launch.
+            </p>
+          </div>
+
+          <div className="flex gap-4 mb-16">
+            <Link
+              href="/projects/ios-app"
+              className="inline-flex items-center border-2 border-orange-500 text-orange-500 px-6 py-3 rounded-lg hover:bg-orange-50 transition-colors shadow-[0_0_15px_rgba(249,115,22,0.3)] hover:shadow-[0_0_20px_rgba(249,115,22,0.5)]"
+            >
+              Read More
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </Link>
+            <Link 
+              href="https://apps.apple.com/us/app/selfhelp-ai/id6742257217"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
+            >
+              View on App Store
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+
         {/* First Project */}
         <div id="expert-search" className="mb-16">
           <h1 className="text-4xl font-bold mb-4">Expert Witness Semantic Search Engine</h1>
@@ -122,33 +169,11 @@ export default function Projects() {
           </div>
 
           <div className="flex gap-4 mb-16">
-            <Link 
-              href="https://github.com/ogreowl/expertWitnessFinder"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
-            >
-              View on GitHub
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </Link>
             <Link
-              href="https://bobbybecker2001.com/expertpages-rag-system/"
-              className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
+              href="/projects/semantic-search-engine/"
+              className="inline-flex items-center border-2 border-orange-500 text-orange-500 px-6 py-3 rounded-lg hover:bg-orange-50 transition-colors shadow-[0_0_15px_rgba(249,115,22,0.3)] hover:shadow-[0_0_20px_rgba(249,115,22,0.5)]"
             >
-              Learn More
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </Link>
-            <Link
-              href="https://www.expertpages.com/ai-expert-finder"
-              target="_blank"
-              rel="noopener noreferrer" 
-              className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
-            >
-              Try it Out
+              Read More
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
@@ -186,6 +211,15 @@ export default function Projects() {
           </div>
 
           <div className="flex gap-4 mb-16">
+            <Link
+              href="/projects/b-factor"
+              className="inline-flex items-center border-2 border-orange-500 text-orange-500 px-6 py-3 rounded-lg hover:bg-orange-50 transition-colors shadow-[0_0_15px_rgba(249,115,22,0.3)] hover:shadow-[0_0_20px_rgba(249,115,22,0.5)]"
+            >
+              Read More
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </Link>
             <Link 
               href="https://github.com/ogreowl/B-Factor_Prediction_Project"
               target="_blank"
@@ -193,15 +227,6 @@ export default function Projects() {
               className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
             >
               View on GitHub
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </Link>
-            <Link
-              href="/projects/b-factor"
-              className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
-            >
-              Read More
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
@@ -226,24 +251,23 @@ export default function Projects() {
 
           <div className="prose max-w-none mb-8">
             <p className="text-gray-600 text-lg leading-relaxed mb-4">
-              In this project, I downloaded 40,000 Chess games from Kaggle (sourced from Lichess) and explored the relationships between
-              player rankings, game outcomes, and moves. After conducting a thorough EDA, I developed a customized K-Nearest Neigbhors model with the goal 
-              of predicting player ranking through an interpretable algorithm.
+            I analyzed over 40,000 online chess games to explore relationships between player ratings, outcomes, openings, and other variables. After conducting a detailed statistical and visual analysis using Python, Pandas, Matplotlib, and Seaborn, I designed a customized K-Nearest Neighbors (KNN) model to predict a player’s rating based on their opening move, game outcome, and opponent skill level — achieving a median error rate within 1.5% of a player’s true ranking.
             </p>
             <p className="text-gray-600 text-lg leading-relaxed mb-8">
-              The model considers three key features: opponent skill level, game outcome, and opening move. As an example, when predicting a player&apos;s ranking who won 
-              with a d4 opening against a 1500-rated opponent, the model first filters for games with matching outcomes and openings, 
-              then identifies the five most similar games based on opponent rating, calculating a weighted average to make its prediction.
-            </p>
-            <p className="text-gray-600 text-lg leading-relaxed mb-8">
-              The model&apos;s mean error rate was, by contrast, around 82 ELO points, which indicates that the KNN struggles with outliers.
-            </p>
-            <p className="text-gray-600 text-lg leading-relaxed mb-8">
-              In addition, I began preliminary work on building a GPT-based Chess engine from games generated by Stockfish. 
+            In addition, I built a Generative Pretrained Transformer to play chess by continually predicting the next move within a sequence. I tested its performance against StockFish, the most powerful Chess Engine, in order to illustrate the potential, limitations, and modern approaches of applying attention-based AI architectures to domains currently dominated by traditional deep learning systems.
             </p>
           </div>
 
           <div className="flex gap-4">
+            <Link
+              href="projects/ml-chess-analysis/"
+              className="inline-flex items-center border-2 border-orange-500 text-orange-500 px-6 py-3 rounded-lg hover:bg-orange-50 transition-colors shadow-[0_0_15px_rgba(249,115,22,0.3)] hover:shadow-[0_0_20px_rgba(249,115,22,0.5)]"
+            >
+              Read More
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </Link>
             <Link 
               href="https://github.com/ogreowl/chess-analysis"
               target="_blank"
@@ -251,15 +275,6 @@ export default function Projects() {
               className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
             >
               View on GitHub
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </Link>
-            <Link
-              href="https://bobbybecker2001.com/ml-chess-analysis/"
-              className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
-            >
-              Read More
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
@@ -310,22 +325,22 @@ export default function Projects() {
           </div>
 
           <div className="flex gap-4">
-            <Link 
+            <Link
+              href="projects/llm-video-game/"
+              className="inline-flex items-center border-2 border-orange-500 text-orange-500 px-6 py-3 rounded-lg hover:bg-orange-50 transition-colors shadow-[0_0_15px_rgba(249,115,22,0.3)] hover:shadow-[0_0_20px_rgba(249,115,22,0.5)]"
+            >
+              Read More
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </Link>
+            <Link
               href="https://github.com/ogreowl/llm_unity_game"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
             >
               View on GitHub
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </Link>
-            <Link
-              href="https://bobbybecker2001.com/large-language-model-enhanced-video-game/"
-              className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
-            >
-              Read More
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
