@@ -60,6 +60,7 @@ export default function BFactorProject() {
             <div className="my-8 flex justify-center">
               <Image
                 src="/images/b.gif"
+                alt="AlphaFold Prediction"
                 width={500}
                 height={200}
                 className="rounded-lg shadow-lg"

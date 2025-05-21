@@ -8,9 +8,9 @@ export default function Projects() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   
   return (
-    <div className="min-h-screen bg-[#000000] text-white">
+    <div className="min-h-screen bg-white text-gray-900">
       {/* Header */}
-      <nav className="fixed w-full top-0 bg-[#1a1a1a]/80 backdrop-blur-sm z-50">
+      <nav className="fixed w-full top-0 bg-white/80 backdrop-blur-sm z-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="text-xl font-bold">
@@ -20,7 +20,7 @@ export default function Projects() {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+              className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none"
               aria-label="Main menu"
               aria-expanded="false"
             >
@@ -62,24 +62,24 @@ export default function Projects() {
 
           {/* Mobile menu dropdown */}
           <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-[#1a1a1a] rounded-md shadow-lg">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white rounded-md shadow-lg">
               <Link 
                 href="/" 
-                className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-400 hover:bg-gray-700 transition"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50 transition"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               <Link 
                 href="/research" 
-                className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-400 hover:bg-gray-700 transition"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50 transition"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Research
               </Link>
               <Link 
                 href="/projects" 
-                className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-400 hover:bg-gray-700 transition"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50 transition"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Projects
@@ -94,27 +94,27 @@ export default function Projects() {
           <h1 className="text-4xl font-bold mb-4">Expert Witness Semantic Search Engine</h1>
           
           <div className="flex flex-wrap gap-2 mb-8">
-            <span className="px-4 py-1.5 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium">Python</span>
-            <span className="px-4 py-1.5 bg-green-500/20 text-green-400 rounded-full text-sm font-medium">BERT</span>
-            <span className="px-4 py-1.5 bg-purple-500/20 text-purple-400 rounded-full text-sm font-medium">Docker</span>
-            <span className="px-4 py-1.5 bg-red-500/20 text-red-400 rounded-full text-sm font-medium">Google Cloud</span>
-            <span className="px-4 py-1.5 bg-yellow-500/20 text-yellow-400 rounded-full text-sm font-medium">React</span>
-            <span className="px-4 py-1.5 bg-pink-500/20 text-pink-400 rounded-full text-sm font-medium">FastAPI</span>
-            <span className="px-4 py-1.5 bg-indigo-500/20 text-indigo-400 rounded-full text-sm font-medium">PostgreSQL</span>
-            <span className="px-4 py-1.5 bg-orange-500/20 text-orange-400 rounded-full text-sm font-medium">Hugging Face</span>
-            <span className="px-4 py-1.5 bg-amber-500/20 text-amber-400 rounded-full text-sm font-medium">JavaScript</span>
-            <span className="px-4 py-1.5 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium">LLMs</span>
-            <span className="px-4 py-1.5 bg-violet-500/20 text-violet-400 rounded-full text-sm font-medium">PHP</span>
-            <span className="px-4 py-1.5 bg-rose-500/20 text-rose-400 rounded-full text-sm font-medium">CSS</span>
+            <span className="px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Python</span>
+            <span className="px-4 py-1.5 bg-green-100 text-green-700 rounded-full text-sm font-medium">BERT</span>
+            <span className="px-4 py-1.5 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Docker</span>
+            <span className="px-4 py-1.5 bg-red-100 text-red-700 rounded-full text-sm font-medium">Google Cloud</span>
+            <span className="px-4 py-1.5 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">React</span>
+            <span className="px-4 py-1.5 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">FastAPI</span>
+            <span className="px-4 py-1.5 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">PostgreSQL</span>
+            <span className="px-4 py-1.5 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">Hugging Face</span>
+            <span className="px-4 py-1.5 bg-amber-100 text-amber-700 rounded-full text-sm font-medium">JavaScript</span>
+            <span className="px-4 py-1.5 bg-cyan-100 text-cyan-700 rounded-full text-sm font-medium">LLMs</span>
+            <span className="px-4 py-1.5 bg-violet-100 text-violet-700 rounded-full text-sm font-medium">PHP</span>
+            <span className="px-4 py-1.5 bg-rose-100 text-rose-700 rounded-full text-sm font-medium">CSS</span>
           </div>
 
-          <div className="prose prose-invert max-w-none mb-8">
-            <p className="text-gray-300 text-lg leading-relaxed mb-4">
+          <div className="prose max-w-none mb-8">
+            <p className="text-gray-600 text-lg leading-relaxed mb-4">
               At Advice Company, I re-engineered the company&apos;s search system for attorneys to find expert witnesses. To do this, I first
               created a script to systematically search through our database and create LLM summaries of each expert witness. Then, I embedded these summaries using
               a BERT model, and created a system to match these precomputed vectors with the embedding of a user query.  
             </p>
-            <p className="text-gray-300 text-lg leading-relaxed mb-4">
+            <p className="text-gray-600 text-lg leading-relaxed mb-4">
               I was able to deploy this system as an API endpoint through Docker and Google Cloud, and designed the front-end interface to integrate it onto the website.
                For the last few months, I&apos;ve been monitoring the system, making adjustments based on user feedback, and improving its efficiency. The service is now live 
                to 500+ high-paying clients on ExpertPages.com, an online directory for expert witnesses.
@@ -126,7 +126,7 @@ export default function Projects() {
               href="https://github.com/ogreowl/expertWitnessFinder"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center border border-blue-400 text-blue-400 px-4 py-2 rounded-lg hover:bg-blue-400/10 transition-colors"
+              className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
             >
               View on GitHub
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -135,7 +135,7 @@ export default function Projects() {
             </Link>
             <Link
               href="https://bobbybecker2001.com/expertpages-rag-system/"
-              className="inline-flex items-center border border-blue-400 text-blue-400 px-4 py-2 rounded-lg hover:bg-blue-400/10 transition-colors"
+              className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
             >
               Learn More
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -146,7 +146,7 @@ export default function Projects() {
               href="https://www.expertpages.com/ai-expert-finder"
               target="_blank"
               rel="noopener noreferrer" 
-              className="inline-flex items-center border border-blue-400 text-blue-400 px-4 py-2 rounded-lg hover:bg-blue-400/10 transition-colors"
+              className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
             >
               Try it Out
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -161,24 +161,24 @@ export default function Projects() {
           <h1 className="text-4xl font-bold mb-4">Using Deep Learning to Predict B-Factors of Amino Acids via Protein Sequences</h1>
           
           <div className="flex flex-wrap gap-2 mb-8">
-            <span className="px-4 py-1.5 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium">Python</span>
-            <span className="px-4 py-1.5 bg-green-500/20 text-green-400 rounded-full text-sm font-medium">PyTorch</span>
-            <span className="px-4 py-1.5 bg-purple-500/20 text-purple-400 rounded-full text-sm font-medium">Transformers</span>
-            <span className="px-4 py-1.5 bg-red-500/20 text-red-400 rounded-full text-sm font-medium">BERT</span>
-            <span className="px-4 py-1.5 bg-yellow-500/20 text-yellow-400 rounded-full text-sm font-medium">Deep Learning</span>
-            <span className="px-4 py-1.5 bg-pink-500/20 text-pink-400 rounded-full text-sm font-medium">Bioinformatics</span>
-            <span className="px-4 py-1.5 bg-indigo-500/20 text-indigo-400 rounded-full text-sm font-medium">Pandas</span>
-            <span className="px-4 py-1.5 bg-orange-500/20 text-orange-400 rounded-full text-sm font-medium">NumPy</span>
+            <span className="px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Python</span>
+            <span className="px-4 py-1.5 bg-green-100 text-green-700 rounded-full text-sm font-medium">PyTorch</span>
+            <span className="px-4 py-1.5 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Transformers</span>
+            <span className="px-4 py-1.5 bg-red-100 text-red-700 rounded-full text-sm font-medium">BERT</span>
+            <span className="px-4 py-1.5 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">Deep Learning</span>
+            <span className="px-4 py-1.5 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">Bioinformatics</span>
+            <span className="px-4 py-1.5 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">Pandas</span>
+            <span className="px-4 py-1.5 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">NumPy</span>
           </div>
 
-          <div className="prose prose-invert max-w-none mb-8">
-            <p className="text-gray-300 text-lg leading-relaxed mb-4">
+          <div className="prose max-w-none mb-8">
+            <p className="text-gray-600 text-lg leading-relaxed mb-4">
               Working with two peers at Tulane University, I helped develop a transformer-based model to predict protein B-factors from amino acid sequences. 
               B-factors measure how much each part of a protein varies from its average position; when, for example, a protein is modelled in Alphafold, 
               each amino acid is displayed in its average position, while B-Factor would measure how much each amino acid would move. Our final model was trained on 
               60,000 protein sequences, achieving a Pearson correlation coefficient of 0.82, on-par with state-of-the-art performance.
             </p>
-            <p className="text-gray-300 text-lg leading-relaxed mb-4">
+            <p className="text-gray-600 text-lg leading-relaxed mb-4">
               My main role in the project involved systematically testing architectures and set-ups -- including linear models, RNNs, LSTMs, and Transformers -- to inform
               how we would design our final model. Using my experience in NLP, I found that BERT embeddings allowed all models to make far more accurate predictions, an insight
               which greatly improved the efficiency of our final model.
@@ -190,7 +190,7 @@ export default function Projects() {
               href="https://github.com/ogreowl/B-Factor_Prediction_Project"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center border border-blue-400 text-blue-400 px-4 py-2 rounded-lg hover:bg-blue-400/10 transition-colors"
+              className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
             >
               View on GitHub
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -199,7 +199,7 @@ export default function Projects() {
             </Link>
             <Link
               href="/projects/b-factor"
-              className="inline-flex items-center border border-blue-400 text-blue-400 px-4 py-2 rounded-lg hover:bg-blue-400/10 transition-colors"
+              className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
             >
               Read More
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -209,36 +209,36 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Second Project */}
+        {/* Third Project */}
         <div id="chess-analysis" className="scroll-mt-20">
           <h2 className="text-4xl font-bold mb-4">Machine Learning Analysis of 40,000 Chess Games</h2>
           
           <div className="flex flex-wrap gap-2 mb-8">
-            <span className="px-4 py-1.5 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium">Python</span>
-            <span className="px-4 py-1.5 bg-green-500/20 text-green-400 rounded-full text-sm font-medium">Scikit-learn</span>
-            <span className="px-4 py-1.5 bg-purple-500/20 text-purple-400 rounded-full text-sm font-medium">Pandas</span>
-            <span className="px-4 py-1.5 bg-red-500/20 text-red-400 rounded-full text-sm font-medium">NumPy</span>
-            <span className="px-4 py-1.5 bg-yellow-500/20 text-yellow-400 rounded-full text-sm font-medium">Matplotlib</span>
-            <span className="px-4 py-1.5 bg-pink-500/20 text-pink-400 rounded-full text-sm font-medium">Seaborn</span>
-            <span className="px-4 py-1.5 bg-indigo-500/20 text-indigo-400 rounded-full text-sm font-medium">Machine Learning</span>
-            <span className="px-4 py-1.5 bg-orange-500/20 text-orange-400 rounded-full text-sm font-medium">KNN</span>
+            <span className="px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Python</span>
+            <span className="px-4 py-1.5 bg-green-100 text-green-700 rounded-full text-sm font-medium">Scikit-learn</span>
+            <span className="px-4 py-1.5 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Pandas</span>
+            <span className="px-4 py-1.5 bg-red-100 text-red-700 rounded-full text-sm font-medium">NumPy</span>
+            <span className="px-4 py-1.5 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">Matplotlib</span>
+            <span className="px-4 py-1.5 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">Seaborn</span>
+            <span className="px-4 py-1.5 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">Machine Learning</span>
+            <span className="px-4 py-1.5 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">KNN</span>
           </div>
 
-          <div className="prose prose-invert max-w-none mb-8">
-            <p className="text-gray-300 text-lg leading-relaxed mb-4">
+          <div className="prose max-w-none mb-8">
+            <p className="text-gray-600 text-lg leading-relaxed mb-4">
               In this project, I downloaded 40,000 Chess games from Kaggle (sourced from Lichess) and explored the relationships between
               player rankings, game outcomes, and moves. After conducting a thorough EDA, I developed a customized K-Nearest Neigbhors model with the goal 
               of predicting player ranking through an interpretable algorithm.
             </p>
-            <p className="text-gray-300 text-lg leading-relaxed mb-8">
+            <p className="text-gray-600 text-lg leading-relaxed mb-8">
               The model considers three key features: opponent skill level, game outcome, and opening move. As an example, when predicting a player&apos;s ranking who won 
               with a d4 opening against a 1500-rated opponent, the model first filters for games with matching outcomes and openings, 
               then identifies the five most similar games based on opponent rating, calculating a weighted average to make its prediction.
             </p>
-            <p className="text-gray-300 text-lg leading-relaxed mb-8">
+            <p className="text-gray-600 text-lg leading-relaxed mb-8">
               The model&apos;s mean error rate was, by contrast, around 82 ELO points, which indicates that the KNN struggles with outliers.
             </p>
-            <p className="text-gray-300 text-lg leading-relaxed mb-8">
+            <p className="text-gray-600 text-lg leading-relaxed mb-8">
               In addition, I began preliminary work on building a GPT-based Chess engine from games generated by Stockfish. 
             </p>
           </div>
@@ -248,7 +248,7 @@ export default function Projects() {
               href="https://github.com/ogreowl/chess-analysis"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center border border-blue-400 text-blue-400 px-4 py-2 rounded-lg hover:bg-blue-400/10 transition-colors"
+              className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
             >
               View on GitHub
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -257,7 +257,7 @@ export default function Projects() {
             </Link>
             <Link
               href="https://bobbybecker2001.com/ml-chess-analysis/"
-              className="inline-flex items-center border border-blue-400 text-blue-400 px-4 py-2 rounded-lg hover:bg-blue-400/10 transition-colors"
+              className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
             >
               Read More
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -266,7 +266,7 @@ export default function Projects() {
             </Link>
             <Link
               href="https://ogreowl.github.io/chess-analysis/"
-              className="inline-flex items-center border border-blue-400 text-blue-400 px-4 py-2 rounded-lg hover:bg-blue-400/10 transition-colors"
+              className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
             >
               Read Tutorial
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -281,25 +281,25 @@ export default function Projects() {
           <h2 className="text-4xl font-bold mb-4">Integrating LLMs into an Original 3D Unity Game</h2>
           
           <div className="flex flex-wrap gap-2 mb-8">
-            <span className="px-4 py-1.5 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium">Unity</span>
-            <span className="px-4 py-1.5 bg-green-500/20 text-green-400 rounded-full text-sm font-medium">C#</span>
-            <span className="px-4 py-1.5 bg-purple-500/20 text-purple-400 rounded-full text-sm font-medium">LLMs</span>
-            <span className="px-4 py-1.5 bg-red-500/20 text-red-400 rounded-full text-sm font-medium">API Design</span>
-            <span className="px-4 py-1.5 bg-yellow-500/20 text-yellow-400 rounded-full text-sm font-medium">3D Graphics</span>
-            <span className="px-4 py-1.5 bg-pink-500/20 text-pink-400 rounded-full text-sm font-medium">Game Dev</span>
-            <span className="px-4 py-1.5 bg-indigo-500/20 text-indigo-400 rounded-full text-sm font-medium">Python</span>
-            <span className="px-4 py-1.5 bg-orange-500/20 text-orange-400 rounded-full text-sm font-medium">RAG</span>
+            <span className="px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Unity</span>
+            <span className="px-4 py-1.5 bg-green-100 text-green-700 rounded-full text-sm font-medium">C#</span>
+            <span className="px-4 py-1.5 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">LLMs</span>
+            <span className="px-4 py-1.5 bg-red-100 text-red-700 rounded-full text-sm font-medium">API Design</span>
+            <span className="px-4 py-1.5 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">3D Graphics</span>
+            <span className="px-4 py-1.5 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">Game Dev</span>
+            <span className="px-4 py-1.5 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">Python</span>
+            <span className="px-4 py-1.5 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">RAG</span>
           </div>
 
-          <div className="prose prose-invert max-w-none mb-8">
-            <p className="text-gray-300 text-lg leading-relaxed mb-4">
+          <div className="prose max-w-none mb-8">
+            <p className="text-gray-600 text-lg leading-relaxed mb-4">
               I led a group project in creating an original Unity-based video game which incorprates Large Language Models to create dynamic NPC interactions and combat narratives. 
               We managed the game state & character behaviors through C# scripts and Unity&apos;s component system, while a custom API helped us handle LLM prompting, context management, 
               and response processing.
             </p>
-            <div className="text-gray-300 text-lg leading-relaxed mb-4">
+            <div className="text-gray-600 text-lg leading-relaxed mb-4">
               Technical Features:
-              <ul className="list-disc pl-6 mt-2 text-gray-300">
+              <ul className="list-disc pl-6 mt-2 text-gray-600">
                 <li>Unity game engine with C# scripting for core mechanics</li>
                 <li>Custom API middleware for LLM integration and prompt management</li>
                 <li>7 NPCs with context-aware dialogue systems</li>
@@ -314,7 +314,7 @@ export default function Projects() {
               href="https://github.com/ogreowl/llm_unity_game"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center border border-blue-400 text-blue-400 px-4 py-2 rounded-lg hover:bg-blue-400/10 transition-colors"
+              className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
             >
               View on GitHub
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -323,7 +323,7 @@ export default function Projects() {
             </Link>
             <Link
               href="https://bobbybecker2001.com/large-language-model-enhanced-video-game/"
-              className="inline-flex items-center border border-blue-400 text-blue-400 px-4 py-2 rounded-lg hover:bg-blue-400/10 transition-colors"
+              className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
             >
               Read More
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -335,7 +335,7 @@ export default function Projects() {
       </main>
 
       {/* Footer */}
-      <footer className="py-8 mt-auto border-t border-gray-800">
+      <footer className="py-8 mt-auto border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-4">
           <nav className="flex justify-center">
             <ul className="flex items-center gap-6">
@@ -344,7 +344,7 @@ export default function Projects() {
                   href="https://github.com/ogreowl" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
+                  className="text-gray-600 hover:text-blue-600 transition-colors"
                 >
                   GitHub
                 </a>
@@ -354,7 +354,7 @@ export default function Projects() {
                   href="https://www.linkedin.com/in/bobby-becker-496964195/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
+                  className="text-gray-600 hover:text-blue-600 transition-colors"
                 >
                   LinkedIn
                 </a>
@@ -362,7 +362,7 @@ export default function Projects() {
               <li>
                 <Link 
                   href="/resume.pdf" 
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
+                  className="text-gray-600 hover:text-blue-600 transition-colors"
                 >
                   Resume
                 </Link>
@@ -370,7 +370,7 @@ export default function Projects() {
               <li>
                 <a 
                   href="mailto:bobbybeckerdev@gmail.com"
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
+                  className="text-gray-600 hover:text-blue-600 transition-colors"
                 >
                   Contact
                 </a>
