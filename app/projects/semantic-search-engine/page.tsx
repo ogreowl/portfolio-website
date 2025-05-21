@@ -212,7 +212,7 @@ function sendQuery() {
             </div>
 
             <p className="text-gray-700 leading-relaxed mb-6">
-              And then created the front-end UI with custom CSS and HTML:
+              And then designed the front-end UI with custom CSS and HTML:
             </p>
 
             <div className="bg-gray-50 rounded-lg p-4 mb-6 max-w-2xl">
