@@ -40,22 +40,22 @@ export default function BFactorProject() {
           <h2 className="text-2xl font-semibold text-gray-900 mt-12 mb-6">Overview</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-700 leading-relaxed mb-6">
-              In this project, I had the opportunity to configure, modify, test, and train numerous machine learning & 
+              In this project, I had the opportunity to configure, modify, test, and train numerous machine learning &amp; 
               deep learning models for the purpose of solving an ongoing problem in bioinformatics: determining the 
               positional variance of amino acids given its sequence. Our final model utilized the transformer architecture 
-              & pre-trained embeddings to achieve a Pearson Correlation Coefficient of 0.78, matching state-of-the-art 
+              &amp; pre-trained embeddings to achieve a Pearson Correlation Coefficient of 0.78, matching state-of-the-art 
               approaches.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-12 mb-6">Background</h2>
             <p className="text-gray-700 leading-relaxed mb-6">
-              Google's AlphaFold has been the most impactful advancement in bioinformatics in recent years. Using a 
+              Google&apos;s AlphaFold has been the most impactful advancement in bioinformatics in recent years. Using a 
               complex ensemble of models, it is now able to take a sequence of amino acids to predict the structure 
               of a protein with an incredibly high accuracy.
             </p>
             <p className="text-gray-700 leading-relaxed mb-6">
               When used, their model generates a static representation of the protein, with each amino acid placed in 
-              its 'mean' position. However, each portion actually varies from this position over time:
+              its &apos;mean&apos; position. However, each portion actually varies from this position over time:
             </p>
             <div className="my-8 flex justify-center">
               <Image
@@ -67,8 +67,8 @@ export default function BFactorProject() {
               />
             </div>
             <p className="text-gray-700 leading-relaxed mb-6">
-              One measure of its variance is 'B-Factor', which can be obtained from X-ray Crystallography. Low B-Factors 
-              indicate well-ordered & stable structures, while high B-Factors indicate mobile & disordered structures.
+              One measure of its variance is &apos;B-Factor&apos;, which can be obtained from X-ray Crystallography. Low B-Factors 
+              indicate well-ordered &amp; stable structures, while high B-Factors indicate mobile &amp; disordered structures.
             </p>
             <p className="text-gray-700 leading-relaxed mb-6">
               The goal is, much like with AlphaFold, to be able to create a model with existing experimental data to 
@@ -157,7 +157,7 @@ export default function BFactorProject() {
             </div>
 
             <p className="text-gray-700 leading-relaxed mb-6">
-              We found that our final model's accuracy varied immensely based on the protein it was predicting. For some 
+              We found that our final model&apos;s accuracy varied immensely based on the protein it was predicting. For some 
               proteins, it made nearly perfect predictions, while it made very inaccurate predictions on others. This 
               indicates that, while our model has the potential to make precise predictions, its overall accuracy is 
               diminished by outliers:

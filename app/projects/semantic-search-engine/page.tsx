@@ -60,11 +60,11 @@ export default function SemanticSearchEngine() {
               ours to connect with expert witnesses based on the specific needs of a given case. Our old search 
               system depended on experts classifying themselves into predefined categories, but this often failed 
               to surface relevant or intuitive results. My new solution used a deep learning model to capture 
-              the unique characteristics of each expert and match them with an attorney's specific requirements.
+              the unique characteristics of each expert and match them with an attorney&apos;s specific requirements.
             </p>
             <p className="text-gray-700 leading-relaxed mb-6">
             The engine is now used by hundreds of attorneys each month and has become a key selling point for attracting 
-            and retaining clients on ExpertPages! Since its launch last November, I've 
+            and retaining clients on ExpertPages! Since its launch last November, I&apos;ve 
               continued to improve its accuracy, manage its cloud infrastructure, and iterate on its design 
               based on user feedback.
 
@@ -228,7 +228,7 @@ function sendQuery() {
     <input 
       type="text" 
       id="searchInput" 
-      placeholder="Describe the expert you're looking for..."
+      placeholder="Describe the expert you&apos;re looking for..."
       class="search-input"
     />
     <button onclick="searchExperts()" class="search-button">

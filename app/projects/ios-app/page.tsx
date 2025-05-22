@@ -23,7 +23,7 @@ export default function IOSApp() {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [slides.length]);
 
   return (
     <div className="min-h-screen bg-white">
@@ -67,7 +67,7 @@ export default function IOSApp() {
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-700 leading-relaxed mb-6">
               I developed the full software stack for Self Help AI, an iOS mobile app that integrates user data, 
-              function calling & personalization settings to create a ChatBot experience for the purpose of self-help. 
+              function calling &amp; personalization settings to create a ChatBot experience for the purpose of self-help. 
               The end product uses ~30k lines of code across 24 files, and has amassed over 200 App Store downloads since launch.
             </p>
 
@@ -341,7 +341,7 @@ export const constructSystemPrompt = (
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Custom Animations & UI</h3>
                 <p className="text-gray-700 mb-4">
-                Custom animations & advanced styling techniques to present with a professional, polished user-interface:
+                Custom animations &amp; advanced styling techniques to present with a professional, polished user-interface:
                 </p>
                 <Highlight
                   theme={themes.github}

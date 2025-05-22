@@ -51,7 +51,7 @@ export default function LLMVideoGame() {
               </ul>
 
               <p className="text-gray-700 leading-relaxed mb-6">
-                The game follows three fantasy characters—a druid, witch, and thief—who are free to roam around an open map under the player's control:
+                The game follows three fantasy characters—a druid, witch, and thief—who are free to roam around an open map under the player&apos;s control:
               </p>
 
               <div className="my-8 flex justify-center">
@@ -65,7 +65,7 @@ export default function LLMVideoGame() {
               </div>
 
               <p className="text-gray-700 leading-relaxed mb-6">
-                They encounter NPCs throughout their journey, who prompt the player to ask whatever question they want. That information is then given to an LLM alongside other pieces of context, such as relevant information about the lore of the game and the NPC character's backstory. The NPC then gives an appropriate response that's also designed to guide the players toward their next objective:
+                They encounter NPCs throughout their journey, who prompt the player to ask whatever question they want. That information is then given to an LLM alongside other pieces of context, such as relevant information about the lore of the game and the NPC character&apos;s backstory. The NPC then gives an appropriate response that&apos;s also designed to guide the players toward their next objective:
               </p>
 
               <div className="my-8 flex justify-center">
@@ -79,7 +79,7 @@ export default function LLMVideoGame() {
               </div>
 
               <p className="text-gray-700 leading-relaxed mb-6">
-                At 3 points throughout the game, the player encounters various enemies, which they automatically engage in Pokemon-style turn-based combat encounters. In these encounters, the player chooses one of four spells to cast from each of their three characters, making strategic decisions to manage their character's health & stamina to defeat the enemy:
+                At 3 points throughout the game, the player encounters various enemies, which they automatically engage in Pokemon-style turn-based combat encounters. In these encounters, the player chooses one of four spells to cast from each of their three characters, making strategic decisions to manage their character&apos;s health &amp; stamina to defeat the enemy:
               </p>
 
               <div className="my-8 flex justify-center">
@@ -135,7 +135,7 @@ export default function LLMVideoGame() {
               </div>
 
               <p className="text-gray-700 leading-relaxed mb-6">
-                Our final product focused on creating a great overall gameplay experience to showcase how LLMs can enhance video games. In simpler programming languages, we also developed prototypes of more advanced ways to integrate LLMs into video games. These include a RAG (Retrieval Augmented Generation) system to search through a larger database of lore for the video game, and an option for a player to write out their own ideas for spells which various NLP/LLMs algorithms analyze to determine the spell's damage/effects.
+                Our final product focused on creating a great overall gameplay experience to showcase how LLMs can enhance video games. In simpler programming languages, we also developed prototypes of more advanced ways to integrate LLMs into video games. These include a RAG (Retrieval Augmented Generation) system to search through a larger database of lore for the video game, and an option for a player to write out their own ideas for spells which various NLP/LLMs algorithms analyze to determine the spell&apos;s damage/effects.
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-6">

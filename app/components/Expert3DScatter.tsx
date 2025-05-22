@@ -1,11 +1,18 @@
 'use client'
 import dynamic from 'next/dynamic';
 import { useEffect, useState, useMemo } from 'react';
+import type { Data, Layout } from 'plotly.js';
 
 const Plot = dynamic(() => import('react-plotly.js'), {
   ssr: false,
   loading: () => <div className="h-[500px] flex items-center justify-center">Loading visualization...</div>
-});
+}) as React.ComponentType<{
+  data: Data[];
+  layout: Partial<Layout>;
+  useResizeHandler?: boolean;
+  style?: React.CSSProperties;
+  config?: any;
+}>;
 
 const colors = [
   '#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd',
@@ -31,6 +38,14 @@ interface UMAPData {
 
 interface Expert3DScatterProps {
   height?: string;
+}
+
+interface PlotProps {
+  data: Data[];
+  layout: Partial<Layout>;
+  useResizeHandler?: boolean;
+  style?: React.CSSProperties;
+  config?: any;
 }
 
 export default function Expert3DScatter({ height = '400px' }: Expert3DScatterProps) {
@@ -118,14 +133,14 @@ export default function Expert3DScatter({ height = '400px' }: Expert3DScatterPro
   const layout = useMemo(() => ({
     autosize: true,
     margin: { l: 0, r: 0, b: 0, t: 0 },
-    title: '',
+    title: { text: '' },
     paper_bgcolor: '#fff',
     plot_bgcolor: '#fff',
     showlegend: false,
     scene: {
-      xaxis: { title: 'UMAP1', gridcolor: '#e5e5e5' },
-      yaxis: { title: 'UMAP2', gridcolor: '#e5e5e5' },
-      zaxis: { title: 'UMAP3', gridcolor: '#e5e5e5' }
+      xaxis: { title: { text: 'UMAP1' }, gridcolor: '#e5e5e5' },
+      yaxis: { title: { text: 'UMAP2' }, gridcolor: '#e5e5e5' },
+      zaxis: { title: { text: 'UMAP3' }, gridcolor: '#e5e5e5' }
     }
   }), []);
 

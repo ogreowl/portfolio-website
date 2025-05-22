@@ -32,13 +32,13 @@ export default function MLChessAnalysis() {
             {/* Header */}
             <div className="mb-12">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">
-                Machine Learning & Data Analysis of Online Chess Games
+                Machine Learning &amp; Data Analysis of Online Chess Games
               </h1>
             </div>
             <h2 className="text-2xl font-semibold text-gray-900 mt-12 mb-6">Overview</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-700 leading-relaxed mb-6">
-              I analyzed over 40,000 online chess games to explore relationships between player ratings, outcomes, openings, and other variables. After conducting a detailed statistical and visual analysis using Python, Pandas, Matplotlib, and Seaborn, I designed a customized K-Nearest Neighbors (KNN) model to predict a player’s rating based on their opening move, game outcome, and opponent skill level — achieving a median error rate within 1.5% of a player’s true ranking.
+              I analyzed over 40,000 online chess games to explore relationships between player ratings, outcomes, openings, and other variables. After conducting a detailed statistical and visual analysis using Python, Pandas, Matplotlib, and Seaborn, I designed a customized K-Nearest Neighbors (KNN) model to predict a player&apos;s rating based on their opening move, game outcome, and opponent skill level — achieving a median error rate within 1.5% of a player&apos;s true ranking.
             </p>
             <p className="text-gray-700 leading-relaxed mb-6">
               In addition, I built a Generative Pretrained Transformer to play chess by continually predicting the next move
@@ -91,7 +91,7 @@ export default function MLChessAnalysis() {
               
             </div>
             <p className="text-gray-700 leading-relaxed mb-6">
-              Based on these findings, I designed a K-Nearest Neighbors (KNN) model to predict chess players' rankings 
+              Based on these findings, I designed a K-Nearest Neighbors (KNN) model to predict chess players&apos; rankings 
               using three key features: opponent skill level, game outcome, and opening move. The model employs a 
               two-step filtering process to make its predictions:
             </p>
@@ -103,18 +103,18 @@ export default function MLChessAnalysis() {
             </ol>
 
             <p className="text-gray-700 leading-relaxed mb-6">
-              To illustrate: Consider predicting a player's ranking in a game where White won with an opening move of d4, 
+              To illustrate: Consider predicting a player&apos;s ranking in a game where White won with an opening move of d4, 
               facing an opponent rated 1500. The model would:
             </p>
 
             <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
               <li>Filter the dataset to only include games where White won with a d4 opening</li>
-              <li>From these games, identify the five where the opponent's rating was closest to 1500</li>
-              <li>Calculate a weighted average of these five players' ratings, (greater weight given to closer similarities)</li>
+              <li>From these games, identify the five where the opponent&apos;s rating was closest to 1500</li>
+              <li>Calculate a weighted average of these five players&apos; ratings, (greater weight given to closer similarities)</li>
             </ul>
 
             <p className="text-gray-700 leading-relaxed mb-6">
-              To evaluate the model's performance, I split the data into training and testing sets. The model makes 
+              To evaluate the model&apos;s performance, I split the data into training and testing sets. The model makes 
               predictions for games in the testing set using only information from the training set. When compared 
               against a baseline model (which predicted rankings based solely on opponent rating), the results were 
               promising:
@@ -131,7 +131,7 @@ export default function MLChessAnalysis() {
 
             <p className="text-gray-700 leading-relaxed mb-6">
               Based on these metrics, the KNN appears to make extremely precise predictions over half of the time. The 
-              main way it does this is through the relationship between the game outcome and the opponent's ranking: if 
+              main way it does this is through the relationship between the game outcome and the opponent&apos;s ranking: if 
               White wins, beating an opponent that is ranked 1500, then they are likely to be ranked higher than 1500.
             </p>
 
@@ -185,8 +185,8 @@ tokenizer.save("chess_tokenizer.json")
               </Highlight>
             </div>
             <p className="text-gray-700 leading-relaxed mb-6">
-              This allows us to interpret chess moves just as ChatGPT & other NLP algorithms interpret word tokens. In fact, with Word2Vec,
-              we can visualize moves & games in 2D space:
+              This allows us to interpret chess moves just as ChatGPT &amp; other NLP algorithms interpret word tokens. In fact, with Word2Vec,
+              we can visualize moves &amp; games in 2D space:
             </p>
             <div className="my-8 flex justify-center">
                 <Image
@@ -349,7 +349,7 @@ def get_gpt_move(current_position):
               Our model was able to play coherently for most of the game—until getting into unknown positions, where it would try to play illegal moves. 
               This is a common issue with transformer-based models, and is a topic of active research. In the future, training a more powerful model exclusively on strong players, 
               and integrating Reinforcement Learning to encourage stronger moves, would likely improve performance massively. Traditional AI engines are 
-              likely to remain dominant in terms of raw strength; but, these GPT-based engines could be used to create more 'human-like' AI engines—by curating
+              likely to remain dominant in terms of raw strength; but, these GPT-based engines could be used to create more &apos;human-like&apos; AI engines—by curating
               the dataset, we can create functioning chess engines that behave like specific players, styles, or eras.
             </p>
             

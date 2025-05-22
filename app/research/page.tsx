@@ -112,7 +112,7 @@ export default function PhilosophyResearch() {
               This research was conducted under the guidance of Aron Culotta, a scholar in natural language processing 
               and social network analysis. From our literature review, it is currently the largest computational analysis
               of philosophical texts that has ever been conducted. Our work is currently undergoing peer review
-              at the Oxford Journal "Digital Scholarship in the Humanities", and is available in pre-print at arXiv.
+              at the Oxford Journal &quot;Digital Scholarship in the Humanities&quot;, and is available in pre-print at arXiv.
             </p>
           </div>
 
@@ -168,7 +168,7 @@ export default function PhilosophyResearch() {
 
           <div className="prose max-w-none mb-8">
             <p className="text-gray-600 text-lg leading-relaxed mb-4">
-            I analyzed over 40,000 online chess games to explore relationships between player ratings, outcomes, openings, and other variables. After conducting a detailed statistical and visual analysis using Python, Pandas, Matplotlib, and Seaborn, I designed a customized K-Nearest Neighbors (KNN) model to predict a player's rating based on their opening move, game outcome, and opponent skill level — achieving a median error rate within 1.5% of a player's true ranking.
+            I analyzed over 40,000 online chess games to explore relationships between player ratings, outcomes, openings, and other variables. After conducting a detailed statistical and visual analysis using Python, Pandas, Matplotlib, and Seaborn, I designed a customized K-Nearest Neighbors (KNN) model to predict a player&apos;s rating based on their opening move, game outcome, and opponent skill level — achieving a median error rate within 1.5% of a player&apos;s true ranking.
             </p>
             <p className="text-gray-600 text-lg leading-relaxed mb-8">
             In addition, I built a Generative Pretrained Transformer to play chess by continually predicting the next move within a sequence. I tested its performance against StockFish, the most powerful Chess Engine, in order to illustrate the potential, limitations, and modern approaches of applying attention-based AI architectures to domains currently dominated by traditional deep learning systems.

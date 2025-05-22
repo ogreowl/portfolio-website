@@ -98,7 +98,7 @@ export default function AgenticRobot() {
             <p className="text-gray-700 leading-relaxed mb-6">
               Finally, we use an SD card to load an operating system onto the Raspberry Pi, 
               along with a configuration to automatically connect with home WiFi. After connecting, 
-              we're able to access it directly through SSH, allowing us to write our software to directly
+              we&apos;re able to access it directly through SSH, allowing us to write our software to directly
              control the hardware components.
             </p>
 
@@ -282,7 +282,7 @@ async def run_conversation():
             <p className="text-gray-700 leading-relaxed mb-6">
             In the future, I will be trying to develop a multi-agent system to allow the AI to interpret and execute 
             higher-level tasks. Instead of directly listening to and responding to a single command at a time (ie, 
-            'move forward'), the aim is for it to be able to execute something more abstract ('find the kitchen') 
+            &apos;move forward&apos;), the aim is for it to be able to execute something more abstract (&apos;find the kitchen&apos;) 
             and then execute a series of functions to complete it (involving movement, taking pictures, processing information). 
             As robotics becomes more accessible, all of this NLP stuff is about to get a lot cooler!
             </p>

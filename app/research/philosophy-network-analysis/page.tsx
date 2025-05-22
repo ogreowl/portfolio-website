@@ -37,7 +37,7 @@ export default function PhilosophyNetworkAnalysis() {
 
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 leading-relaxed mb-6">
-                Over the past year, I worked with Aron Culotta, a well-known professor in AI and natural language processing, to conduct what is currently the largest computational analysis of philosophical texts within the English language. Our work is currently undergoing peer review from the Oxford Journal, "Digital Scholarship in the Humanities."
+                Over the past year, I worked with Aron Culotta, a well-known professor in AI and natural language processing, to conduct what is currently the largest computational analysis of philosophical texts within the English language. Our work is currently undergoing peer review from the Oxford Journal, &quot;Digital Scholarship in the Humanities.&quot;
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-6">
@@ -126,7 +126,7 @@ export default function PhilosophyNetworkAnalysis() {
                   className="rounded-lg shadow-lg"
                 />
                 <p className="text-gray-600 text-sm italic mt-2 max-w-2xl text-center">
-                Figure 5: Kant's position in our reference network
+                Figure 5: Kant&apos;s position in our reference network
 
                 </p>
               </div>
