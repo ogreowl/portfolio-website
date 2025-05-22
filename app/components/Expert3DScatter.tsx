@@ -1,7 +1,7 @@
 'use client'
 import dynamic from 'next/dynamic';
 import { useEffect, useState, useMemo } from 'react';
-import type { Data, Layout } from 'plotly.js';
+import type { Data, Layout, Config } from 'plotly.js';
 
 const Plot = dynamic(() => import('react-plotly.js'), {
   ssr: false,
@@ -11,7 +11,7 @@ const Plot = dynamic(() => import('react-plotly.js'), {
   layout: Partial<Layout>;
   useResizeHandler?: boolean;
   style?: React.CSSProperties;
-  config?: any;
+  config?: Partial<Config>;
 }>;
 
 const colors = [
