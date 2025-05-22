@@ -136,29 +136,18 @@ export default function PhilosophyNetworkAnalysis() {
 
               <div className="flex gap-4 mt-8">
                 <a 
-                  href="#"
+                  href="https://arxiv.org/abs/2504.20065"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
                 >
-                  Read Full Paper
+                  Read Pre-Print
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </a>
                 <a 
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center border border-blue-400 text-blue-400 px-4 py-2 rounded-lg hover:bg-blue-400/10 transition-colors"
-                >
-                  View GitHub
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-                <a 
-                  href="#"
+                  href="https://ogreowl.github.io/PhilBERT/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center border border-blue-400 text-blue-400 px-4 py-2 rounded-lg hover:bg-blue-400/10 transition-colors"

@@ -10,16 +10,22 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
+interface Slide {
+  src: string;
+  alt: string;
+  title: string;
+}
+
 const Expert3DScatter = dynamic(() => import('./components/Expert3DScatter'), {
   ssr: false,
   loading: () => <div className="h-[400px] flex items-center justify-center">Loading visualization...</div>
 });
 
 export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [currentSlide, setCurrentSlide] = useState(0)
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
+  const [currentSlide, setCurrentSlide] = useState<number>(0)
 
-  const slides = [
+  const slides: Slide[] = [
     {
       src: "/images/figure1.jpg",
       alt: "Network Structure Analysis",
@@ -50,11 +56,11 @@ export default function Home() {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
   }
 
-  const particlesInit = useCallback(async (engine: Engine) => {
+  const particlesInit = useCallback(async (engine: Engine): Promise<void> => {
     await loadSlim(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container: Container | undefined) => {
+  const particlesLoaded = useCallback(async (container: Container | undefined): Promise<void> => {
     console.log("Particles loaded", container);
   }, []);
 
@@ -253,9 +259,9 @@ export default function Home() {
       </div>
 
       {/* Featured Project Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/20">
+          <div className="bg-white rounded-2xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/20 border border-blue-100 shadow-lg shadow-blue-500/10">
             <div className="grid md:grid-cols-2 gap-12">
               {/* Left Column - Project Info */}
               <div>
@@ -285,25 +291,14 @@ export default function Home() {
 
                   <div className="flex gap-4">
                     <Link 
-                      href="/projects#expert-search" 
+                      href="/projects/semantic-search-engine" 
                       className="px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition flex items-center"
                     >
-                      View Project
+                      Read More
                       <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                       </svg>
                     </Link>
-                    <a 
-                      href="https://expertpages.com" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="px-6 py-3 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 transition flex items-center"
-                    >
-                      Live Demo
-                      <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                      </svg>
-                    </a>
                   </div>
                 </div>
               </div>
@@ -323,12 +318,12 @@ export default function Home() {
       </section>
 
       {/* Research Paper Section */}
-      <section className="py-20 bg-gradient-to-br from-indigo-50 to-purple-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/20">
-            <div className="grid md:grid-cols-6 gap-8">
+          <div className="bg-white rounded-2xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/20 border border-purple-100 shadow-lg shadow-purple-500/10">
+            <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
               {/* Left Column - Research Info */}
-              <div className="md:col-span-2">
+              <div className="lg:col-span-2">
                 <div className="flex flex-wrap gap-2 mb-6">
                   <span className="px-4 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
                     Featured Research
@@ -366,7 +361,7 @@ export default function Home() {
                       </svg>
                     </Link>
                     <a 
-                      href="https://arxiv.org/abs/2402.12345" 
+                      href="https://arxiv.org/abs/2504.20065" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="px-6 py-3 border border-purple-600 text-purple-600 rounded-full hover:bg-purple-50 transition flex items-center"
@@ -381,7 +376,7 @@ export default function Home() {
               </div>
 
               {/* Right Column - Visualization */}
-              <div className="md:col-span-4 bg-white rounded-xl p-2 h-full flex flex-col">
+              <div className="lg:col-span-4 bg-white rounded-xl p-2 h-full flex flex-col hidden lg:flex">
                 <br></br><br></br>
                 <div className="relative aspect-[16/7] min-h-[450px]">
                   <Image
@@ -406,7 +401,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-600 text-sm text-center mt-2">
-                  Visualizations included in our network analysis
+                  Visualizations included in our analysis
                 </p>
               </div>
             </div>
@@ -415,14 +410,14 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-20 bg-gray-50">
+      <section id="experience" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-4">Professional Experience</h2>
           <div className="h-1 w-12 bg-blue-500 mx-auto mb-12"></div>
           
           <div className="space-y-8">
             {/* Software Engineer Card */}
-            <div className="bg-white rounded-xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer">
+            <div className="bg-white rounded-xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer border border-gray-200 shadow-lg shadow-gray-500/10">
               <div className="flex flex-wrap gap-2 mb-4 sm:absolute sm:top-8 sm:right-8">
                 <span className="px-4 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
                   Part-Time
@@ -450,7 +445,7 @@ export default function Home() {
             </div>
 
             {/* Research Assistant Card */}
-            <div className="bg-white rounded-xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer">
+            <div className="bg-white rounded-xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer border border-gray-200 shadow-lg shadow-gray-500/10">
               <div className="flex flex-wrap gap-2 mb-4 sm:absolute sm:top-8 sm:right-8">
               <span className="px-4 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
                   August 2024 - May 2025
@@ -488,13 +483,13 @@ export default function Home() {
           <div className="h-1 w-12 bg-blue-500 mx-auto mb-12"></div>
 
           {/* First Row - 3 Projects */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 mb-12 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-12 mb-12 max-w-5xl mx-auto px-4 lg:px-0">
             {/* Amino Acid Project */}
             <div className="group rounded-xl overflow-hidden bg-white shadow-lg 
                           transition-all duration-300 
                           hover:scale-[1.02] hover:-translate-y-2 
                           hover:shadow-2xl hover:shadow-blue-500/20 
-                          cursor-pointer">
+                          cursor-pointer max-w-sm mx-auto w-full">
               <div className="h-36 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300">
                 <Dna className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
               </div>
@@ -507,9 +502,9 @@ export default function Home() {
                 </p>
                 <div className="flex flex-wrap gap-1 mb-3">
                   <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">Deep Learning</span>
-                  <span className="px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-600">Python</span>
+                  <span className="px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-600">PyTorch</span>
                 </div>
-                <a href="/projects#protein-factors" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
+                <a href="/research/b-factor" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
                   View Project
                   <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -523,7 +518,7 @@ export default function Home() {
                           transition-all duration-300 
                           hover:scale-[1.02] hover:-translate-y-2 
                           hover:shadow-2xl hover:shadow-green-500/20 
-                          cursor-pointer">
+                          cursor-pointer max-w-sm mx-auto w-full">
               <div className="h-36 bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300">
                 <Crown className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
               </div>
@@ -538,7 +533,7 @@ export default function Home() {
                   <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">Machine Learning</span>
                   <span className="px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-600">Data Analysis</span>
                 </div>
-                <a href="/projects#chess-analysis" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
+                <a href="/research/ml-chess-analysis" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
                   View Project
                   <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -552,7 +547,7 @@ export default function Home() {
                           transition-all duration-300 
                           hover:scale-[1.02] hover:-translate-y-2 
                           hover:shadow-2xl hover:shadow-purple-500/20 
-                          cursor-pointer">
+                          cursor-pointer max-w-sm mx-auto w-full">
               <div className="h-36 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300">
                 <Gamepad2 className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
               </div>
@@ -567,7 +562,7 @@ export default function Home() {
                   <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">Unity</span>
                   <span className="px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-600">C#</span>
                 </div>
-                <a href="/projects#unity-game" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
+                <a href="/projects/llm-video-game" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
                   View Project
                   <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -578,13 +573,13 @@ export default function Home() {
           </div>
 
           {/* Second Row - 2 Projects */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-2xl mx-auto px-4 lg:px-0">
             {/* SelfHelp AI */}
             <div className="group rounded-xl overflow-hidden bg-white shadow-lg 
                           transition-all duration-300 
                           hover:scale-[1.02] hover:-translate-y-2 
                           hover:shadow-2xl hover:shadow-pink-500/20 
-                          cursor-pointer">
+                          cursor-pointer max-w-sm mx-auto w-full">
               <div className="h-36 bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300">
                 <Activity className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
               </div>
@@ -596,10 +591,10 @@ export default function Home() {
                   Full-stack iOS app, integrating user data to create AI chatbots for self improvement. 200+ App Store downloads
                 </p>
                 <div className="flex flex-wrap gap-1 mb-3">
-                  <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">Swift</span>
-                  <span className="px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-600">SwiftUI</span>
+                  <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">React Native</span>
+                  <span className="px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-600">OpenAI</span>
                 </div>
-                <a href="/projects#selfhelp-ai" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
+                <a href="/projects/ios-app" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
                   View Project
                   <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -613,7 +608,7 @@ export default function Home() {
                           transition-all duration-300 
                           hover:scale-[1.02] hover:-translate-y-2 
                           hover:shadow-2xl hover:shadow-violet-500/20 
-                          cursor-pointer">
+                          cursor-pointer max-w-sm mx-auto w-full">
               <div className="h-36 bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300">
                 <Bot className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
               </div>
@@ -628,7 +623,7 @@ export default function Home() {
                   <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">Python</span>
                   <span className="px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-600">Raspberry Pi</span>
                 </div>
-                <a href="/projects#voice-robot" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
+                <a href="/projects/agentic-robot" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
                   View Project
                   <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -641,7 +636,7 @@ export default function Home() {
       </section>
 
       {/* The College Contemporary Section */}
-      <section id="publications" className="py-20 bg-gray-50">
+      <section id="publications" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-4">The College Contemporary</h2>
           <div className="h-1 w-12 bg-blue-500 mx-auto mb-6"></div>
@@ -670,7 +665,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Left Column - Stats and Overview */}
             <div className="space-y-6">
-              <div className="bg-white rounded-xl p-8 shadow-lg">
+              <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 shadow-lg shadow-gray-500/10">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-gray-50 rounded-lg p-6 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/10">
                     <div className="text-4xl font-bold text-blue-600 mb-2">100+</div>
@@ -695,7 +690,7 @@ export default function Home() {
               </div>
 
               {/* Key Achievements */}
-              <div className="bg-white rounded-xl p-8 shadow-lg">
+              <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 shadow-lg shadow-gray-500/10">
                 <h3 className="text-xl font-semibold mb-6 text-gray-800">Achievements</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start space-x-3">
@@ -725,7 +720,7 @@ export default function Home() {
             {/* Right Column */}
             <div className="space-y-6">
               {/* Content Categories */}
-              <div className="bg-white rounded-xl p-8 shadow-lg">
+              <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 shadow-lg shadow-gray-500/10">
                 <h3 className="text-xl font-semibold mb-6 text-gray-800">Content Breakdown (by articles published)</h3>
                 
                 <div className="space-y-6">
@@ -792,7 +787,7 @@ export default function Home() {
               </div>
 
               {/* Editorial Process */}
-              <div className="bg-white rounded-xl p-8 shadow-lg">
+              <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 shadow-lg shadow-gray-500/10">
                 <h3 className="text-xl font-semibold mb-6 text-gray-800">Pretty Good Pieces</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start space-x-3">
