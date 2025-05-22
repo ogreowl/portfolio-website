@@ -95,109 +95,173 @@ export default function PhilosophyResearch() {
 
           <div className="prose max-w-none mb-8">
             <p className="text-gray-600 text-lg leading-relaxed mb-4">
-              We applied computational methods to analyze reference patterns across 1,076 philosophical texts 
-              from Project Gutenberg, revealing quantitative insights into how philosophical ideas have spread 
-              across time. By combining network analysis with natural language processing, we mapped over 
-              109,692 references to measure historical influence patterns, finding that Plato and Aristotle 
-              account for nearly 25% of all citations.
+              As a research assitant at Tulane University, I conducted what is currently the largest 
+              computational analysis of historical texts in philosophy—analyzing over 2,245 texts, from 550 BCE to 
+              1940 AD,to investigate patterns in how philosophical influence has spread across time. We created custom 
+              Python scripts to identify and track over 294,970 references between authors and classified these references 
+              with a transformer-based natural language processing model to investigate how major figures influenced different areas
+              of philosophy.
             </p>
-            <p className="text-gray-600 text-lg leading-relaxed mb-8">
-              Our interactive tool allows users to explore these philosophical networks, choosing a philosopher 
-              to display who they commonly reference and who references them—with the ability to sort references 
-              by topic (e.g., &apos;ethics&apos; or &apos;metaphysics&apos;). The project reveals distinct network structures among 
-              philosophical traditions, supporting traditional understandings of intellectual lineages while 
-              challenging others.
+            <p className="text-gray-600 text-lg leading-relaxed mb-4">
+              We represented our data as graphs, treating authors as node and their in-text references 
+              to other authors as edges, which allowed us to apply graph theory algorithms 
+              to its structure. We informed our analysis with a deep investigation
+              into primary and secondary sources in philosophy, and created a publically available3D interactive tool to visualize our results.
+            </p>
+            <p className="text-gray-600 text-lg leading-relaxed mb-4">
+              This research was conducted under the guidance of Aron Culotta, a scholar in natural language processing 
+              and social network analysis. From our literature review, it is currently the largest computational analysis
+              of philosophical texts that has ever been conducted. Our work is currently undergoing peer review
+              at the Oxford Journal "Digital Scholarship in the Humanities", and is available in pre-print at arXiv.
             </p>
           </div>
 
           <div className="flex gap-4 mb-16">
+          <Link
+              href="research/philosophy-network-analysis"
+              className="inline-flex items-center border-2 border-orange-500 text-orange-500 px-6 py-3 rounded-lg hover:bg-orange-50 transition-colors shadow-[0_0_15px_rgba(249,115,22,0.3)] hover:shadow-[0_0_20px_rgba(249,115,22,0.5)]"
+            >
+              Read More
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </Link>
+            <a 
+              href="https://arxiv.org/abs/2504.20065"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
+            >
+              View Pre-Print
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
             <a 
               href="https://ogreowl.github.io/PhilBERT/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
             >
               Try Interactive Demo
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
-            <a 
-              href="https://github.com/ogreowl/nlp-philosophy-project"
+          </div>
+        </div>
+
+                {/* Third Project */}
+                <div id="chess-analysis" className="scroll-mt-20">
+          <h2 className="text-4xl font-bold mb-4">Machine Learning Analysis of 40,000 Chess Games</h2>
+          
+          <div className="flex flex-wrap gap-2 mb-8">
+            <span className="px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Python</span>
+            <span className="px-4 py-1.5 bg-green-100 text-green-700 rounded-full text-sm font-medium">Scikit-learn</span>
+            <span className="px-4 py-1.5 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Pandas</span>
+            <span className="px-4 py-1.5 bg-red-100 text-red-700 rounded-full text-sm font-medium">NumPy</span>
+            <span className="px-4 py-1.5 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">Matplotlib</span>
+            <span className="px-4 py-1.5 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">Seaborn</span>
+            <span className="px-4 py-1.5 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">Machine Learning</span>
+            <span className="px-4 py-1.5 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">KNN</span>
+          </div>
+
+          <div className="prose max-w-none mb-8">
+            <p className="text-gray-600 text-lg leading-relaxed mb-4">
+            I analyzed over 40,000 online chess games to explore relationships between player ratings, outcomes, openings, and other variables. After conducting a detailed statistical and visual analysis using Python, Pandas, Matplotlib, and Seaborn, I designed a customized K-Nearest Neighbors (KNN) model to predict a player's rating based on their opening move, game outcome, and opponent skill level — achieving a median error rate within 1.5% of a player's true ranking.
+            </p>
+            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+            In addition, I built a Generative Pretrained Transformer to play chess by continually predicting the next move within a sequence. I tested its performance against StockFish, the most powerful Chess Engine, in order to illustrate the potential, limitations, and modern approaches of applying attention-based AI architectures to domains currently dominated by traditional deep learning systems.
+            </p>
+          </div>
+
+          <div className="flex gap-4">
+            <Link
+              href="research/ml-chess-analysis/"
+              className="inline-flex items-center border-2 border-orange-500 text-orange-500 px-6 py-3 rounded-lg hover:bg-orange-50 transition-colors shadow-[0_0_15px_rgba(249,115,22,0.3)] hover:shadow-[0_0_20px_rgba(249,115,22,0.5)]"
+            >
+              Read More
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </Link>
+            <Link 
+              href="https://github.com/ogreowl/chess-analysis"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
             >
-              View GitHub
+              View on GitHub
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
-            </a>
+            </Link>
+            <Link
+              href="https://ogreowl.github.io/chess-analysis/"
+              className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
+            >
+              Read Tutorial
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </Link>
           </div>
+          <br></br><br></br>
         </div>
 
         {/* Second Project */}
-        <div>
-          <h2 className="text-4xl font-bold mb-6">Analyzing Philosophical Texts in Embedding Space</h2>
+        <div id="protein-factors" className="mb-16 scroll-mt-20">
+          <h1 className="text-4xl font-bold mb-4">Using Deep Learning to Predict B-Factors of Amino Acids via Protein Sequences</h1>
+          
+          <div className="flex flex-wrap gap-2 mb-8">
+            <span className="px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Python</span>
+            <span className="px-4 py-1.5 bg-green-100 text-green-700 rounded-full text-sm font-medium">PyTorch</span>
+            <span className="px-4 py-1.5 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Transformers</span>
+            <span className="px-4 py-1.5 bg-red-100 text-red-700 rounded-full text-sm font-medium">BERT</span>
+            <span className="px-4 py-1.5 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">Deep Learning</span>
+            <span className="px-4 py-1.5 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">Bioinformatics</span>
+            <span className="px-4 py-1.5 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">Pandas</span>
+            <span className="px-4 py-1.5 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">NumPy</span>
+          </div>
 
           <div className="prose max-w-none mb-8">
             <p className="text-gray-600 text-lg leading-relaxed mb-4">
-              After experimenting with mapping philosophical relationships using LLMs, I explored how traditional 
-              NLP algorithms could be applied to philosophy. I trained a Word2Vec model on 43 classical philosophical 
-              texts, including works from Kant, Plato, Aristotle, Descartes, Hegel, Spinoza, and Marx. The model 
-              represents words as numerical vectors, capturing semantic relationships in high-dimensional space.
+              Working with two peers at Tulane University, I helped develop a transformer-based model to predict protein B-factors from amino acid sequences. 
+              B-factors measure how much each part of a protein varies from its average position; when, for example, a protein is modeled in Alphafold, 
+              each amino acid is displayed in its average position, while B-Factor would measure how much each amino acid would move. Our final model was trained on 
+              60,000 protein sequences, achieving a Pearson correlation coefficient of 0.82, on-par with state-of-the-art performance.
             </p>
-            <p className="text-gray-600 text-lg leading-relaxed mb-8">
-              Using Principal Component Analysis and Latent Dirichlet Allocation, I visualized relationships 
-              between philosophical concepts and texts. This led to the development of a search application for 
-              Plato&apos;s dialogues, independently discovering an approach similar to Retrieval Augmented Generation. 
-              This work later influenced the development of a semantic search engine at Advice Company.
+            <p className="text-gray-600 text-lg leading-relaxed mb-4">
+              My main role in the project involved systematically testing architectures and set-ups -- including linear models, RNNs, LSTMs, and Transformers -- to inform
+              how we would design our final model. Using my experience in NLP, I found that BERT embeddings allowed all models to make far more accurate predictions, an insight
+              which greatly improved the efficiency of our final model.
             </p>
           </div>
 
-          <div className="flex gap-4">
-            <a 
-              href="https://bobbybecker2001.com/nlp-philosophy/"
+          <div className="flex gap-4 mb-16">
+            <Link
+              href="/research/b-factor"
+              className="inline-flex items-center border-2 border-orange-500 text-orange-500 px-6 py-3 rounded-lg hover:bg-orange-50 transition-colors shadow-[0_0_15px_rgba(249,115,22,0.3)] hover:shadow-[0_0_20px_rgba(249,115,22,0.5)]"
+            >
+              Read More
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </Link>
+            <Link 
+              href="https://github.com/ogreowl/B-Factor_Prediction_Project"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
             >
-              Read More
+              View on GitHub
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
 
-        {/* Third Project */}
-        <div className="mt-16">
-          <h2 className="text-4xl font-bold mb-6">Deriving Historical Networks from Large Language Models </h2>
-
-          <div className="prose max-w-none mb-8">
-            <p className="text-gray-600 text-lg leading-relaxed mb-4">
-              Working with Professor Alireza Shirvani, I explored patterns in LLM outputs through quantitative 
-              analysis. Using the OpenAI API, I generated and analyzed 500+ responses to understand how LLMs model 
-              and represent knowledge domains. Recently, I&apos;ve been conducting preliminary experiments and reading
-              to explore re-approaching this project with Aron Culotta as a way to systematically measure 
-              how different large language models represent history.
-            </p>
-          </div>
-
-          <div className="flex gap-4">
-            <a 
-              href="https://bobbybecker2001.com/empirical-research-and-data-visualization-of-llms/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
-            >
-              Read More
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
-          </div>
-        </div>
       </main>
 
       {/* Footer */}

@@ -31,7 +31,7 @@ export default function PhilosophyNetworkAnalysis() {
             {/* Header */}
             <div className="mb-12">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">
-                Deriving and Analyzing Reference Networks from the Philosophical Canon
+                Analyzing Reference Networks Across Philosophical Texts
               </h1>
             </div>
 

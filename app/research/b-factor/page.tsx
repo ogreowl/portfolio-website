@@ -16,11 +16,11 @@ export default function BFactorProject() {
               Bobby Becker
             </Link>
             <Link 
-              href="/projects" 
+              href="/research" 
               className="inline-flex items-center text-gray-600 hover:text-blue-600 transition"
             >
               <ArrowLeft className="h-5 w-5 mr-2" />
-              Back to Projects
+              Back to research
             </Link>
           </div>
         </div>
