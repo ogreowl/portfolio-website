@@ -24,7 +24,7 @@ const CACHE_KEY = 'umap_data_cache';
 const CACHE_EXPIRY = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
 
 interface CacheData {
-  data: any[];
+  data: UMAPData[];
   timestamp: number;
 }
 
@@ -33,19 +33,11 @@ interface UMAPData {
   UMAP2: number;
   UMAP3: number;
   Cluster: number;
-  [key: string]: any;
+  [key: string]: string | number | undefined;
 }
 
 interface Expert3DScatterProps {
   height?: string;
-}
-
-interface PlotProps {
-  data: Data[];
-  layout: Partial<Layout>;
-  useResizeHandler?: boolean;
-  style?: React.CSSProperties;
-  config?: any;
 }
 
 export default function Expert3DScatter({ height = '400px' }: Expert3DScatterProps) {
@@ -70,7 +62,7 @@ export default function Expert3DScatter({ height = '400px' }: Expert3DScatterPro
 
         // If no cache or stale, fetch from server
         const response = await fetch('/umap.json');
-        const json = await response.json();
+        const json: UMAPData[] = await response.json();
         
         // Update cache
         const cacheData: CacheData = {

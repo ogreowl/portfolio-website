@@ -2,7 +2,6 @@
 
 import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Highlight, themes } from 'prism-react-renderer'
 import Expert3DScatter from '../../components/Expert3DScatter'
 

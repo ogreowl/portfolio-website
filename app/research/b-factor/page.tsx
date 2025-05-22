@@ -2,7 +2,6 @@
 
 import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
-import { Highlight, themes } from 'prism-react-renderer'
 import Image from 'next/image'
 
 export default function BFactorProject() {
