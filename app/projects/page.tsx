@@ -251,7 +251,7 @@ export default function Projects() {
 
           <div className="prose max-w-none mb-8">
             <p className="text-gray-600 text-lg leading-relaxed mb-4">
-            I analyzed over 40,000 online chess games to explore relationships between player ratings, outcomes, openings, and other variables. After conducting a detailed statistical and visual analysis using Python, Pandas, Matplotlib, and Seaborn, I designed a customized K-Nearest Neighbors (KNN) model to predict a player’s rating based on their opening move, game outcome, and opponent skill level — achieving a median error rate within 1.5% of a player’s true ranking.
+            I analyzed over 40,000 online chess games to explore relationships between player ratings, outcomes, openings, and other variables. After conducting a detailed statistical and visual analysis using Python, Pandas, Matplotlib, and Seaborn, I designed a customized K-Nearest Neighbors (KNN) model to predict a player's rating based on their opening move, game outcome, and opponent skill level — achieving a median error rate within 1.5% of a player's true ranking.
             </p>
             <p className="text-gray-600 text-lg leading-relaxed mb-8">
             In addition, I built a Generative Pretrained Transformer to play chess by continually predicting the next move within a sequence. I tested its performance against StockFish, the most powerful Chess Engine, in order to illustrate the potential, limitations, and modern approaches of applying attention-based AI architectures to domains currently dominated by traditional deep learning systems.
@@ -341,6 +341,43 @@ export default function Projects() {
               className="inline-flex items-center border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
             >
               View on GitHub
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+
+        {/* Raspberry Pi Robot Project */}
+        <div id="raspberry-pi-robot" className="mt-16">
+          <h2 className="text-4xl font-bold mb-4">Multimodal Voice-Controlled Robot</h2>
+          
+          <div className="flex flex-wrap gap-2 mb-8">
+            <span className="px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Python</span>
+            <span className="px-4 py-1.5 bg-green-100 text-green-700 rounded-full text-sm font-medium">Raspberry Pi</span>
+            <span className="px-4 py-1.5 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Computer Vision</span>
+            <span className="px-4 py-1.5 bg-red-100 text-red-700 rounded-full text-sm font-medium">OpenCV</span>
+            <span className="px-4 py-1.5 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">Robotics</span>
+            <span className="px-4 py-1.5 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">GPIO</span>
+            <span className="px-4 py-1.5 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">PID Control</span>
+            <span className="px-4 py-1.5 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">Linux</span>
+          </div>
+
+          <div className="prose max-w-none mb-8">
+          <p className="text-gray-600 text-lg leading-relaxed mb-4">
+              I developed a multimodal robot with Rasberry Pi that can interpret voice commands, control 
+              movements, analyze its surroundings, and respond with emotionally expressive speech. This involved
+              integrating three seperate AI models (Speech-to-Text, a Multimodal LLM, and Text-to-Speech) with
+              a Rasberry Pi, controller board, motors, camera, microphone, and speaker. 
+            </p>
+          </div>
+
+          <div className="flex gap-4">
+            <Link
+              href="projects/agentic-robot/"
+              className="inline-flex items-center border-2 border-orange-500 text-orange-500 px-6 py-3 rounded-lg hover:bg-orange-50 transition-colors shadow-[0_0_15px_rgba(249,115,22,0.3)] hover:shadow-[0_0_20px_rgba(249,115,22,0.5)]"
+            >
+              Read More
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>

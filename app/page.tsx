@@ -32,7 +32,7 @@ export default function Home() {
               value: "transparent",
             },
           },
-          fpsLimit: 120,
+          fpsLimit: 60,
           interactivity: {
             events: {
               onHover: {
@@ -43,8 +43,8 @@ export default function Home() {
             },
             modes: {
               repulse: {
-                distance: 100,
-                duration: 0.4,
+                distance: 80,
+                duration: 0.6,
               },
             },
           },
@@ -56,7 +56,7 @@ export default function Home() {
               color: "#3b82f6",
               distance: 150,
               enable: true,
-              opacity: 0.1,
+              opacity: 0.4,
               width: 1,
             },
             move: {
@@ -66,24 +66,24 @@ export default function Home() {
                 default: "bounce",
               },
               random: false,
-              speed: 1,
+              speed: 0.5,
               straight: false,
             },
             number: {
               density: {
                 enable: true,
-                area: 800,
+                area: 1000,
               },
-              value: 80,
+              value: 40,
             },
             opacity: {
-              value: 0.3,
+              value: 0.4,
             },
             shape: {
               type: "circle",
             },
             size: {
-              value: { min: 1, max: 3 },
+              value: { min: 1, max: 2 },
             },
           },
           detectRetina: true,
