@@ -21,7 +21,11 @@ interface CacheData {
   timestamp: number;
 }
 
-export default function Expert3DScatter() {
+interface Expert3DScatterProps {
+  height?: string;
+}
+
+export default function Expert3DScatter({ height = '400px' }: Expert3DScatterProps) {
   const [data, setData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -127,13 +131,10 @@ export default function Expert3DScatter() {
           data={plotData}
           layout={layout}
           useResizeHandler={true}
-          style={{ width: '100%', height: '400px' }}
+          style={{ width: '100%', height }}
           config={{ responsive: true, displayModeBar: false }}
         />
       </div>
-      <p className="text-gray-600 text-sm text-center mb-12">
-        3D visualization of expert witness embeddings created by a sentence transformer model. This gives each expert a rich semantic representation, which is used by the semantic search engine.
-      </p>
     </div>
   );
 } 

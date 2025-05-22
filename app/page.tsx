@@ -1,15 +1,54 @@
 'use client'
 // app/page.tsx
-import { ArrowDown, Dna, Crown, Bot } from 'lucide-react'
+import { ArrowDown, Dna, Crown, Bot, ChevronLeft, ChevronRight, Gamepad2, Activity } from 'lucide-react'
 import { useCallback, useState } from 'react'
 import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import { TypeAnimation } from 'react-type-animation';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+
+const Expert3DScatter = dynamic(() => import('./components/Expert3DScatter'), {
+  ssr: false,
+  loading: () => <div className="h-[400px] flex items-center justify-center">Loading visualization...</div>
+});
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  const slides = [
+    {
+      src: "/images/figure1.jpg",
+      alt: "Network Structure Analysis",
+      title: "Network Structure Analysis"
+    },
+    {
+      src: "/images/heatmap1.jpg",
+      alt: "In-degree Centrality",
+      title: "In-degree Centrality"
+    },
+    {
+      src: "/images/figure4.jpg",
+      alt: "Topic Analysis",
+      title: "Topic Analysis"
+    },
+    {
+      src: "/images/figure5.jpg",
+      alt: "Kant's Network Position",
+      title: "Kant's Network Position"
+    }
+  ]
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+  }
 
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine);
@@ -178,11 +217,12 @@ export default function Home() {
                 <span className="text-blue-600">Bobby Becker</span>
               </h1>
               <h2 className="text-4xl font-light mb-6 text-gray-700">
-                AI Research & Full-Stack Engineer
+                AI Researcher & Full-Stack Engineer
               </h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Graduate student at Tulane University with a focus in AI, Natural Language Processing, and Full-Stack Development. Experienced in managing 
-                large teams and applying machine learning to both research & application.
+              Master's graduate in Computer Science from Tulane University with 
+              a strong background in Natural Language Processing, Full-Stack Development, 
+              and Data Science.
               </p>
               <div className="flex space-x-4">
                 <a href="#contact" 
@@ -196,45 +236,12 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="bg-gray-50 p-8 font-mono rounded-lg shadow-sm">
-              <div className="text-green-600 mb-4">
-                <TypeAnimation
-                  sequence={[
-                    '// Technical Skills',
-                    1000,
-                    '// Product Management',
-                    1000,
-                    '// Cloud Architecture',
-                    1000,
-                    '// DevOps & CI/CD',
-                    1000,
-                    '// System Design',
-                    1000,
-                  ]}
-                  wrapper="span"
-                  speed={1}
-                  repeat={Infinity}
-                  className="font-mono"
-                />
-              </div>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <span className="text-blue-600">→</span>
-                  <span className="text-gray-700">AI/ML: Architecture design, model training, feature engineering, deployment, RAG</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="text-blue-600">→</span>
-                  <span className="text-gray-700">Data Science: visualization, analysis, machine learning, natural language processing</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="text-blue-600">→</span>
-                  <span className="text-gray-700">Languages: Python, C++, C, JavaScript, Java, CSS, HTML, PHP, SQL</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="text-blue-600">→</span>
-                  <span className="text-gray-700">Web Development: Full-stack integration, UI/UX design, SEO</span>
-                </div>
-              </div>
+            <div className="relative flex justify-center">
+              <img 
+                src="/images/me.png" 
+                alt="Bobby Becker" 
+                className="w-96 h-auto rounded-lg shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
+              />
             </div>
           </div>
         </div>
@@ -244,6 +251,168 @@ export default function Home() {
           <ArrowDown className="h-6 w-6 text-gray-400" />
         </div>
       </div>
+
+      {/* Featured Project Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/20">
+            <div className="grid md:grid-cols-2 gap-12">
+              {/* Left Column - Project Info */}
+              <div>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  <span className="px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
+                    Featured Project
+                  </span>
+                </div>
+                
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                  Expert Witness Semantic Search
+                </h3>
+                
+                <div className="space-y-6">
+                  <div>
+                    <p className="text-gray-700">
+                      Developed a BERT-based semantic search engine that processes and matches legal queries against expert witness profiles. 
+                      Implemented using Python, Huggingface transformers, and deployed through Docker & Google Cloud Platform.
+                    </p>
+                  </div>
+                  
+                  <div>
+                    <p className="text-gray-700">
+                      The engine is currently active on ExpertPages.com, serving 500+ high-paying clients and recieving over 2,000 searches per month.
+                    </p>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <Link 
+                      href="/projects#expert-search" 
+                      className="px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition flex items-center"
+                    >
+                      View Project
+                      <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                      </svg>
+                    </Link>
+                    <a 
+                      href="https://expertpages.com" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="px-6 py-3 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 transition flex items-center"
+                    >
+                      Live Demo
+                      <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column - Visualization */}
+              <div className="bg-white rounded-xl p-2 h-full flex flex-col">
+                <div className="flex-1 min-h-[270px]">
+                  <Expert3DScatter height="270px" />
+                </div>
+                <p className="text-gray-600 text-sm text-center mt-1">
+                  3D visualization of expert witness embeddings in UMAP
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Research Paper Section */}
+      <section className="py-20 bg-gradient-to-br from-indigo-50 to-purple-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/20">
+            <div className="grid md:grid-cols-6 gap-8">
+              {/* Left Column - Research Info */}
+              <div className="md:col-span-2">
+                <div className="flex flex-wrap gap-2 mb-6">
+                  <span className="px-4 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
+                    Featured Research
+                  </span>
+                </div>
+                
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                  Network Analysis of Philosophical Texts
+                </h3>
+                
+                <div className="space-y-6">
+                  <div>
+                    <p className="text-gray-700">
+                      Conducted largest computational analysis of philosophical texts to date—utilizing natural language processing and network analysis to analyze 294,970 textual references across 2,245 philosophical works.
+                      Applied graph theory and created interactive visualization tool to analyze how philosophical influence has evolved from 550 BCE to 1940 AD.
+                    </p>
+                  </div>
+                  
+                  <div>
+                    <p className="text-gray-700">
+                      Research conducted under Professor Aron Culotta at Tulane University, 
+                      currently undergoing peer review at the Oxford Journal 
+                      "Digital Scholarship in the Humanities", and available as pre-print at arXiv.
+                    </p>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <Link 
+                      href="/research/philosophy-network-analysis" 
+                      className="px-6 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition flex items-center"
+                    >
+                      Read More
+                      <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                      </svg>
+                    </Link>
+                    <a 
+                      href="https://arxiv.org/abs/2402.12345" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="px-6 py-3 border border-purple-600 text-purple-600 rounded-full hover:bg-purple-50 transition flex items-center"
+                    >
+                      View Pre-Print
+                      <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column - Visualization */}
+              <div className="md:col-span-4 bg-white rounded-xl p-2 h-full flex flex-col">
+                <br></br><br></br>
+                <div className="relative aspect-[16/7] min-h-[450px]">
+                  <Image
+                    src={slides[currentSlide].src}
+                    alt={slides[currentSlide].alt}
+                    fill
+                    className="object-cover rounded-lg transition-opacity duration-300"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-between p-2">
+                    <button
+                      onClick={prevSlide}
+                      className="p-2 rounded-full bg-white/80 hover:bg-white text-gray-800 shadow-lg transition-all hover:scale-110"
+                    >
+                      <ChevronLeft className="w-6 h-6" />
+                    </button>
+                    <button
+                      onClick={nextSlide}
+                      className="p-2 rounded-full bg-white/80 hover:bg-white text-gray-800 shadow-lg transition-all hover:scale-110"
+                    >
+                      <ChevronRight className="w-6 h-6" />
+                    </button>
+                  </div>
+                </div>
+                <p className="text-gray-600 text-sm text-center mt-2">
+                  Visualizations included in our network analysis
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Experience Section */}
       <section id="experience" className="py-20 bg-gray-50">
@@ -258,9 +427,9 @@ export default function Home() {
                 <span className="px-4 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
                   Part-Time
                 </span>
-                <Link href="/projects" className="px-4 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-blue-500 hover:text-white transition-colors">
-                  See More
-                </Link>
+                <span className="px-4 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                  July 2024 - Present
+                </span>
               </div>
               <h3 className="text-2xl text-blue-600 font-semibold mb-2">
                 Software Engineer
@@ -268,25 +437,14 @@ export default function Home() {
               <h4 className="text-gray-600 text-lg mb-6">
                 Advice Company
               </h4>
-              <p className="text-gray-700 mb-4">
-                Managed & integrated features across 8 websites which provide legal resources. Most recently, led the development of a BERT-based semantic search engine for legal professionals:
-              </p>
               <ul className="space-y-3">
                 <li className="flex items-start space-x-3">
                   <span className="text-blue-600 mt-1">→</span>
-                  <span className="text-gray-700">Implemented backend using Python & Huggingface transformers</span>
+                  <span className="text-gray-700">Designed and deployed a BERT-based semantic search engine using Python, Hugging Face, and GCP</span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <span className="text-blue-600 mt-1">→</span>
-                  <span className="text-gray-700">Deployed as API endpoint through Docker & Google Cloud Platform</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <span className="text-blue-600 mt-1">→</span>
-                  <span className="text-gray-700">Integrated to Frontend through JavaScript & HTML</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <span className="text-blue-600 mt-1">→</span>
-                  <span className="text-gray-700">Launched to 500+ high-paying clients</span>
+                  <span className="text-gray-700">Managed & developed full-stack features across eight websites based around providing legal recourses</span>
                 </li>
               </ul>
             </div>
@@ -294,9 +452,9 @@ export default function Home() {
             {/* Research Assistant Card */}
             <div className="bg-white rounded-xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer">
               <div className="flex flex-wrap gap-2 mb-4 sm:absolute sm:top-8 sm:right-8">
-                <Link href="/research" className="px-4 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-blue-500 hover:text-white transition-colors">
-                  See More
-                </Link>
+              <span className="px-4 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                  August 2024 - May 2025
+                </span>
               </div>
               <h3 className="text-2xl text-blue-600 font-semibold mb-2">
                 Research Assistant
@@ -304,21 +462,18 @@ export default function Home() {
               <h4 className="text-gray-600 text-lg mb-6">
                 Tulane University
               </h4>
-              <p className="text-gray-700 mb-4">
-                Working with Professor Aron Culotta on research publications:
-              </p>
               <ul className="space-y-3">
                 <li className="flex items-start space-x-3">
                   <span className="text-blue-600 mt-1">→</span>
-                  <span className="text-gray-700">Developed NLP pipeline to analyze 109,692 references across 1,076 philosophical texts</span>
+                  <span className="text-gray-700">Led development of NLP pipeline to extract and classify 290k+ references in philosophy corpus</span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <span className="text-blue-600 mt-1">→</span>
-                  <span className="text-gray-700">Created novel interactive tool to visualize & analyze reference networks between authors</span>
+                  <span className="text-gray-700">Built modular scripts to process Gutenberg texts, train topic models, and construct network graphs</span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <span className="text-blue-600 mt-1">→</span>
-                  <span className="text-gray-700">Employed transformer-based models to classify references by topic</span>
+                  <span className="text-gray-700">Designed interactive network visualizations using D3.js and custom UI components</span>
                 </li>
               </ul>
             </div>
@@ -329,11 +484,11 @@ export default function Home() {
       {/* Projects Section */}
       <section id="projects" className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-4">Featured Projects</h2>
+          <h2 className="text-4xl font-bold text-center mb-4">Additional Projects & Research</h2>
           <div className="h-1 w-12 bg-blue-500 mx-auto mb-12"></div>
 
-          {/* Single Row - 5 Projects */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          {/* First Row - 3 Projects */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 mb-12 max-w-5xl mx-auto">
             {/* Amino Acid Project */}
             <div className="group rounded-xl overflow-hidden bg-white shadow-lg 
                           transition-all duration-300 
@@ -345,10 +500,10 @@ export default function Home() {
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
-                  Amino Acid Prediction
+                  B-Factor Prediction
                 </h3>
                 <p className="text-gray-600 text-sm mb-3">
-                  Deep learning model for protein B-factors prediction
+                  Training deep learning models to predict amino acid B-Factors with protein sequences
                 </p>
                 <div className="flex flex-wrap gap-1 mb-3">
                   <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">Deep Learning</span>
@@ -374,10 +529,10 @@ export default function Home() {
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-green-600 transition-colors">
-                  Chess Games Analysis
+                  Chess Games Data Analysis
                 </h3>
                 <p className="text-gray-600 text-sm mb-3">
-                  Machine learning analysis of 40,000+ chess games using advanced analytics
+                  Applying machine learning & data science to analyze 40,000+ chess games and training GPT Chess engine
                 </p>
                 <div className="flex flex-wrap gap-1 mb-3">
                   <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">Machine Learning</span>
@@ -399,14 +554,14 @@ export default function Home() {
                           hover:shadow-2xl hover:shadow-purple-500/20 
                           cursor-pointer">
               <div className="h-36 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300">
-                <Bot className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
+                <Gamepad2 className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-purple-600 transition-colors">
-                  3D Combat Game with LLMs
+                  AI-driven 3D Unity Game
                 </h3>
                 <p className="text-gray-600 text-sm mb-3">
-                  Unity-based turn-based combat game with integrated language models
+                  Integrating large language models to enhance NPC dialogue and combat encounters in original 3D unity game
                 </p>
                 <div className="flex flex-wrap gap-1 mb-3">
                   <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">Unity</span>
@@ -420,7 +575,10 @@ export default function Home() {
                 </a>
               </div>
             </div>
+          </div>
 
+          {/* Second Row - 2 Projects */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 max-w-2xl mx-auto">
             {/* SelfHelp AI */}
             <div className="group rounded-xl overflow-hidden bg-white shadow-lg 
                           transition-all duration-300 
@@ -428,14 +586,14 @@ export default function Home() {
                           hover:shadow-2xl hover:shadow-pink-500/20 
                           cursor-pointer">
               <div className="h-36 bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300">
-                <Bot className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
+                <Activity className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-pink-600 transition-colors">
                   SelfHelp AI
                 </h3>
                 <p className="text-gray-600 text-sm mb-3">
-                  iOS app providing personalized AI-powered mental wellness support and journaling
+                  Full-stack iOS app, integrating user data to create AI chatbots for self improvement. 200+ App Store downloads
                 </p>
                 <div className="flex flex-wrap gap-1 mb-3">
                   <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">Swift</span>
@@ -461,10 +619,10 @@ export default function Home() {
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-violet-600 transition-colors">
-                  Voice-Controlled Robot
+                  Multimodal Autonomous Robot
                 </h3>
                 <p className="text-gray-600 text-sm mb-3">
-                  Raspberry Pi-powered robot that responds to voice commands using natural language processing
+                  Raspberry Pi-powered robot that utilizes NLP and computer vision to respond to user commands
                 </p>
                 <div className="flex flex-wrap gap-1 mb-3">
                   <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">Python</span>
