@@ -21,12 +21,20 @@ interface CacheData {
   timestamp: number;
 }
 
+interface UMAPData {
+  UMAP1: number;
+  UMAP2: number;
+  UMAP3: number;
+  Cluster: number;
+  [key: string]: any;
+}
+
 interface Expert3DScatterProps {
   height?: string;
 }
 
 export default function Expert3DScatter({ height = '400px' }: Expert3DScatterProps) {
-  const [data, setData] = useState<any[]>([]);
+  const [data, setData] = useState<UMAPData[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

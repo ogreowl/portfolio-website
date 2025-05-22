@@ -5,7 +5,6 @@ import { useCallback, useState } from 'react'
 import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
-import { TypeAnimation } from 'react-type-animation';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
@@ -226,9 +225,9 @@ export default function Home() {
                 AI Researcher & Full-Stack Engineer
               </h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Master's graduate in Computer Science from Tulane University with 
-              a strong background in Natural Language Processing, Full-Stack Development, 
-              and Data Science.
+                Master&apos;s graduate in Computer Science from Tulane University with 
+                a strong background in Natural Language Processing, Full-Stack Development, 
+                and Data Science.
               </p>
               <div className="flex space-x-4">
                 <a href="#contact" 
@@ -243,9 +242,11 @@ export default function Home() {
             </div>
             
             <div className="relative flex justify-center">
-              <img 
+              <Image 
                 src="/images/me.png" 
                 alt="Bobby Becker" 
+                width={384}
+                height={512}
                 className="w-96 h-auto rounded-lg shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
               />
             </div>
@@ -346,7 +347,7 @@ export default function Home() {
                     <p className="text-gray-700">
                       Research conducted under Professor Aron Culotta at Tulane University, 
                       currently undergoing peer review at the Oxford Journal 
-                      "Digital Scholarship in the Humanities", and available as pre-print at arXiv.
+                      &quot;Digital Scholarship in the Humanities&quot;, and available as pre-print at arXiv.
                     </p>
                   </div>
 
