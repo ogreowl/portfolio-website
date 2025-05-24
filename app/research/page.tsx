@@ -112,7 +112,7 @@ export default function PhilosophyResearch() {
               This research was conducted under the guidance of Aron Culotta, a scholar in natural language processing 
               and social network analysis. From our literature review, it is currently the largest computational analysis
               of philosophical texts that has ever been conducted. Our work is currently undergoing peer review
-              at the Oxford Journal &quot;Digital Scholarship in the Humanities&quot;, and is available in pre-print at arXiv.
+              at the Oxford Journal &quot;Digital Scholarship in the Humanities&quot;, and is available in pre-print on arXiv.
             </p>
           </div>
 

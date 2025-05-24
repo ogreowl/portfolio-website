@@ -230,13 +230,9 @@ export default function Home() {
                 and Data Science.
               </p>
               <div className="flex space-x-4">
-                <a href="#contact" 
+                <a href="mailto:bobbybeckerdev@gmail.com" 
                    className="px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
                   Contact Me
-                </a>
-                <a href="#projects"
-                   className="px-6 py-3 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 transition">
-                  View Projects
                 </a>
               </div>
             </div>
@@ -260,7 +256,7 @@ export default function Home() {
       </div>
 
       {/* Featured Project Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/20 border border-blue-100 shadow-lg shadow-blue-500/10">
             <div className="grid md:grid-cols-2 gap-12">
@@ -319,7 +315,7 @@ export default function Home() {
       </section>
 
       {/* Research Paper Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/20 border border-purple-100 shadow-lg shadow-purple-500/10">
             <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
@@ -347,7 +343,7 @@ export default function Home() {
                     <p className="text-gray-700">
                       Research conducted under Professor Aron Culotta at Tulane University, 
                       currently undergoing peer review at the Oxford Journal 
-                      &quot;Digital Scholarship in the Humanities&quot;, and available as pre-print at arXiv.
+                      &quot;Digital Scholarship in the Humanities&quot;, and available as pre-print on arXiv.
                     </p>
                   </div>
 
@@ -490,11 +486,11 @@ export default function Home() {
                           transition-all duration-300 
                           hover:scale-[1.02] hover:-translate-y-2 
                           hover:shadow-2xl hover:shadow-blue-500/20 
-                          cursor-pointer max-w-sm mx-auto w-full">
-              <div className="h-36 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300">
+                          cursor-pointer max-w-sm mx-auto w-full relative z-10">
+              <div className="h-36 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300 bg-white">
                 <Dna className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
               </div>
-              <div className="p-4">
+              <div className="p-4 bg-white relative">
                 <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
                   B-Factor Prediction
                 </h3>
@@ -519,11 +515,11 @@ export default function Home() {
                           transition-all duration-300 
                           hover:scale-[1.02] hover:-translate-y-2 
                           hover:shadow-2xl hover:shadow-green-500/20 
-                          cursor-pointer max-w-sm mx-auto w-full">
-              <div className="h-36 bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300">
+                          cursor-pointer max-w-sm mx-auto w-full relative z-10">
+              <div className="h-36 bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300 bg-white">
                 <Crown className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
               </div>
-              <div className="p-4">
+              <div className="p-4 bg-white relative">
                 <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-green-600 transition-colors">
                   Chess Games Data Analysis
                 </h3>
@@ -548,11 +544,11 @@ export default function Home() {
                           transition-all duration-300 
                           hover:scale-[1.02] hover:-translate-y-2 
                           hover:shadow-2xl hover:shadow-purple-500/20 
-                          cursor-pointer max-w-sm mx-auto w-full">
-              <div className="h-36 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300">
+                          cursor-pointer max-w-sm mx-auto w-full relative z-10">
+              <div className="h-36 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300 bg-white">
                 <Gamepad2 className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
               </div>
-              <div className="p-4">
+              <div className="p-4 bg-white relative">
                 <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-purple-600 transition-colors">
                   AI-driven 3D Unity Game
                 </h3>
@@ -580,11 +576,11 @@ export default function Home() {
                           transition-all duration-300 
                           hover:scale-[1.02] hover:-translate-y-2 
                           hover:shadow-2xl hover:shadow-pink-500/20 
-                          cursor-pointer max-w-sm mx-auto w-full">
-              <div className="h-36 bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300">
+                          cursor-pointer max-w-sm mx-auto w-full relative z-10">
+              <div className="h-36 bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300 bg-white">
                 <Activity className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
               </div>
-              <div className="p-4">
+              <div className="p-4 bg-white relative">
                 <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-pink-600 transition-colors">
                   SelfHelp AI
                 </h3>
@@ -609,11 +605,11 @@ export default function Home() {
                           transition-all duration-300 
                           hover:scale-[1.02] hover:-translate-y-2 
                           hover:shadow-2xl hover:shadow-violet-500/20 
-                          cursor-pointer max-w-sm mx-auto w-full">
-              <div className="h-36 bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300">
+                          cursor-pointer max-w-sm mx-auto w-full relative z-10">
+              <div className="h-36 bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300 bg-white">
                 <Bot className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
               </div>
-              <div className="p-4">
+              <div className="p-4 bg-white relative">
                 <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-violet-600 transition-colors">
                   Multimodal Autonomous Robot
                 </h3>
@@ -666,7 +662,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Left Column - Stats and Overview */}
             <div className="space-y-6">
-              <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 shadow-lg shadow-gray-500/10">
+              <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 shadow-lg shadow-gray-500/10 relative z-10">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-gray-50 rounded-lg p-6 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/10">
                     <div className="text-4xl font-bold text-blue-600 mb-2">100+</div>
@@ -691,7 +687,7 @@ export default function Home() {
               </div>
 
               {/* Key Achievements */}
-              <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 shadow-lg shadow-gray-500/10">
+              <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 shadow-lg shadow-gray-500/10 relative z-10">
                 <h3 className="text-xl font-semibold mb-6 text-gray-800">Achievements</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start space-x-3">
@@ -721,7 +717,7 @@ export default function Home() {
             {/* Right Column */}
             <div className="space-y-6">
               {/* Content Categories */}
-              <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 shadow-lg shadow-gray-500/10">
+              <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 shadow-lg shadow-gray-500/10 relative z-10">
                 <h3 className="text-xl font-semibold mb-6 text-gray-800">Content Breakdown (by articles published)</h3>
                 
                 <div className="space-y-6">
@@ -788,7 +784,7 @@ export default function Home() {
               </div>
 
               {/* Editorial Process */}
-              <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 shadow-lg shadow-gray-500/10">
+              <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 shadow-lg shadow-gray-500/10 relative z-10">
                 <h3 className="text-xl font-semibold mb-6 text-gray-800">Pretty Good Pieces</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start space-x-3">
