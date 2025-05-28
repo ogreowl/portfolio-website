@@ -445,7 +445,7 @@ export default function Home() {
             <div className="bg-white rounded-xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer border border-gray-200 shadow-lg shadow-gray-500/10">
               <div className="flex flex-wrap gap-2 mb-4 sm:absolute sm:top-8 sm:right-8">
               <span className="px-4 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
-                  August 2024 - May 2025
+                  August 2023 - May 2025
                 </span>
               </div>
               <h3 className="text-2xl text-blue-600 font-semibold mb-2">
@@ -480,7 +480,7 @@ export default function Home() {
           <div className="h-1 w-12 bg-blue-500 mx-auto mb-12"></div>
 
           {/* First Row - 3 Projects */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-12 mb-12 max-w-5xl mx-auto px-4 lg:px-0">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-12 max-w-5xl mx-auto px-4 lg:px-0">
             {/* Amino Acid Project */}
             <div className="group rounded-xl overflow-hidden bg-white shadow-lg 
                           transition-all duration-300 
@@ -570,7 +570,7 @@ export default function Home() {
           </div>
 
           {/* Second Row - 2 Projects */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-2xl mx-auto px-4 lg:px-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-2xl mx-auto px-4 lg:px-0">
             {/* SelfHelp AI */}
             <div className="group rounded-xl overflow-hidden bg-white shadow-lg 
                           transition-all duration-300 
