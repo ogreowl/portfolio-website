@@ -39,9 +39,6 @@ export default function SemanticSearchEngine() {
           {/* 3D Scatter Plot Visualization */}
           <div className="mb-12">
             <Expert3DScatter />
-            <p className="text-gray-600 text-sm text-center mb-12">
-            3D visualization of expert witness embeddings created by a sentence transformer model. This gives each expert a rich semantic representation which is used by the search engine.
-            </p>
           </div>
 
           {/* Project Overview */}

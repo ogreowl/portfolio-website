@@ -258,13 +258,33 @@ export default function Home() {
       {/* Featured Project Section */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center mb-4">Featured Works</h2>
+          <div className="h-1 w-12 bg-blue-500 mx-auto mb-12"></div>
           <div className="bg-white rounded-2xl p-8 relative transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/20 border border-blue-100 shadow-lg shadow-blue-500/10">
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
               {/* Left Column - Project Info */}
               <div>
                 <div className="flex flex-wrap gap-2 mb-6">
                   <span className="px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                    Featured Project
+                    BERT
+                  </span>
+                  <span className="px-4 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                    Python
+                  </span>
+                  <span className="px-4 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
+                    Docker
+                  </span>
+                  <span className="px-4 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">
+                    GCP
+                  </span>
+                  <span className="px-4 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">
+                    CSS
+                  </span>
+                  <span className="px-4 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">
+                    HTML
+                  </span>
+                  <span className="px-4 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">
+                    JavaScript
                   </span>
                 </div>
                 
@@ -301,13 +321,10 @@ export default function Home() {
               </div>
 
               {/* Right Column - Visualization */}
-              <div className="bg-white rounded-xl p-2 h-full flex flex-col">
-                <div className="flex-1 min-h-[270px]">
+              <div className="bg-white rounded-xl p-2 flex flex-col justify-between md:mt-0">
+                <div className="min-h-[270px]">
                   <Expert3DScatter height="270px" />
                 </div>
-                <p className="text-gray-600 text-sm text-center mt-1">
-                  3D visualization of expert witness embeddings in UMAP
-                </p>
               </div>
             </div>
           </div>
@@ -322,9 +339,12 @@ export default function Home() {
               {/* Left Column - Research Info */}
               <div className="lg:col-span-2">
                 <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="px-4 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
-                    Featured Research
-                  </span>
+                  <span className="px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">NLP</span>
+                  <span className="px-4 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">Network Analysis</span>
+                  <span className="px-4 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">Python</span>
+                  <span className="px-4 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">D3.js</span>
+                  <span className="px-4 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">Topic Modeling</span>
+                  <span className="px-4 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">BERT</span>
                 </div>
                 
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">
@@ -406,6 +426,170 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Projects Section */}
+      <section id="projects" className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center mb-4">Additional Projects & Research</h2>
+          <div className="h-1 w-12 bg-blue-500 mx-auto mb-12"></div>
+
+          {/* First Row - 3 Projects */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-12 max-w-5xl mx-auto px-4 lg:px-0">
+            {/* Amino Acid Project */}
+            <div className="group rounded-xl overflow-hidden bg-white shadow-lg 
+                          transition-all duration-300 
+                          hover:scale-[1.02] hover:-translate-y-2 
+                          hover:shadow-2xl hover:shadow-blue-500/20 
+                          cursor-pointer max-w-sm mx-auto w-full relative z-10">
+              <div className="h-36 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300 bg-white">
+                <Dna className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
+              </div>
+              <div className="p-4 bg-white relative">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+                  B-Factor Prediction
+                </h3>
+                <p className="text-gray-600 text-sm mb-3">
+                  Training deep learning models to predict amino acid B-Factors with protein sequences
+                </p>
+                <div className="flex flex-wrap gap-1 mb-3">
+                  <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">Deep Learning</span>
+                  <span className="px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-600">PyTorch</span>
+                  <span className="px-2 py-1 rounded-full text-xs bg-green-100 text-green-600">Bioinformatics</span>
+                </div>
+                <a href="/research/b-factor" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
+                  View Project
+                  <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Chess Analysis Project */}
+            <div className="group rounded-xl overflow-hidden bg-white shadow-lg 
+                          transition-all duration-300 
+                          hover:scale-[1.02] hover:-translate-y-2 
+                          hover:shadow-2xl hover:shadow-green-500/20 
+                          cursor-pointer max-w-sm mx-auto w-full relative z-10">
+              <div className="h-36 bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300 bg-white">
+                <Crown className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
+              </div>
+              <div className="p-4 bg-white relative">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-green-600 transition-colors">
+                  Chess Games Data Analysis
+                </h3>
+                <p className="text-gray-600 text-sm mb-3">
+                  Applying machine learning & data science to analyze 40,000+ chess games and training GPT Chess engine
+                </p>
+                <div className="flex flex-wrap gap-1 mb-3">
+                  <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">ML</span>
+                  <span className="px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-600">KNN</span>
+                  <span className="px-2 py-1 rounded-full text-xs bg-green-100 text-green-600">GPT from Scratch</span>
+                </div>
+                <a href="/research/ml-chess-analysis" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
+                  View Project
+                  <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Unity Game Project */}
+            <div className="group rounded-xl overflow-hidden bg-white shadow-lg 
+                          transition-all duration-300 
+                          hover:scale-[1.02] hover:-translate-y-2 
+                          hover:shadow-2xl hover:shadow-purple-500/20 
+                          cursor-pointer max-w-sm mx-auto w-full relative z-10">
+              <div className="h-36 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300 bg-white">
+                <Gamepad2 className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
+              </div>
+              <div className="p-4 bg-white relative">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-purple-600 transition-colors">
+                  AI-driven 3D Unity Game
+                </h3>
+                <p className="text-gray-600 text-sm mb-3">
+                  Integrating large language models to enhance NPC dialogue and combat encounters in original 3D unity game
+                </p>
+                <div className="flex flex-wrap gap-1 mb-3">
+                  <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">Unity</span>
+                  <span className="px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-600">C#</span>
+                  <span className="px-2 py-1 rounded-full text-xs bg-green-100 text-green-600">LLMs</span>
+                  <span className="px-2 py-1 rounded-full text-xs bg-indigo-100 text-indigo-600">RAG</span>
+                </div>
+                <a href="/projects/llm-video-game" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
+                  View Project
+                  <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Second Row - 2 Projects */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-2xl mx-auto px-4 lg:px-0">
+            {/* SelfHelp AI */}
+            <div className="group rounded-xl overflow-hidden bg-white shadow-lg 
+                          transition-all duration-300 
+                          hover:scale-[1.02] hover:-translate-y-2 
+                          hover:shadow-2xl hover:shadow-pink-500/20 
+                          cursor-pointer max-w-sm mx-auto w-full relative z-10">
+              <div className="h-36 bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300 bg-white">
+                <Activity className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
+              </div>
+              <div className="p-4 bg-white relative">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-pink-600 transition-colors">
+                  SelfHelp AI
+                </h3>
+                <p className="text-gray-600 text-sm mb-3">
+                  Full-stack iOS app, integrating user data to create AI chatbots for self improvement. 200+ App Store downloads
+                </p>
+                <div className="flex flex-wrap gap-1 mb-3">
+                  <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">React Native</span>
+                  <span className="px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-600">OpenAI</span>
+                </div>
+                <a href="/projects/ios-app" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
+                  View Project
+                  <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Voice-Controlled Robot */}
+            <div className="group rounded-xl overflow-hidden bg-white shadow-lg 
+                          transition-all duration-300 
+                          hover:scale-[1.02] hover:-translate-y-2 
+                          hover:shadow-2xl hover:shadow-violet-500/20 
+                          cursor-pointer max-w-sm mx-auto w-full relative z-10">
+              <div className="h-36 bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300 bg-white">
+                <Bot className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
+              </div>
+              <div className="p-4 bg-white relative">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-violet-600 transition-colors">
+                  Multimodal Autonomous Robot
+                </h3>
+                <p className="text-gray-600 text-sm mb-3">
+                  Raspberry Pi-powered robot that utilizes NLP and computer vision to respond to user commands
+                </p>
+                <div className="flex flex-wrap gap-1 mb-3">
+                  <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">Python</span>
+                  <span className="px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-600">Raspberry Pi</span>
+                  <span className="px-2 py-1 rounded-full text-xs bg-green-100 text-green-600">LVLMs</span>
+                </div>
+                <a href="/projects/agentic-robot" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
+                  View Project
+                  <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Experience Section */}
       <section id="experience" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -468,165 +652,6 @@ export default function Home() {
                   <span className="text-gray-700">Designed interactive network visualizations using D3.js and custom UI components</span>
                 </li>
               </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section id="projects" className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-4">Additional Projects & Research</h2>
-          <div className="h-1 w-12 bg-blue-500 mx-auto mb-12"></div>
-
-          {/* First Row - 3 Projects */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-12 max-w-5xl mx-auto px-4 lg:px-0">
-            {/* Amino Acid Project */}
-            <div className="group rounded-xl overflow-hidden bg-white shadow-lg 
-                          transition-all duration-300 
-                          hover:scale-[1.02] hover:-translate-y-2 
-                          hover:shadow-2xl hover:shadow-blue-500/20 
-                          cursor-pointer max-w-sm mx-auto w-full relative z-10">
-              <div className="h-36 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300 bg-white">
-                <Dna className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
-              </div>
-              <div className="p-4 bg-white relative">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
-                  B-Factor Prediction
-                </h3>
-                <p className="text-gray-600 text-sm mb-3">
-                  Training deep learning models to predict amino acid B-Factors with protein sequences
-                </p>
-                <div className="flex flex-wrap gap-1 mb-3">
-                  <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">Deep Learning</span>
-                  <span className="px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-600">PyTorch</span>
-                </div>
-                <a href="/research/b-factor" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
-                  View Project
-                  <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            {/* Chess Analysis Project */}
-            <div className="group rounded-xl overflow-hidden bg-white shadow-lg 
-                          transition-all duration-300 
-                          hover:scale-[1.02] hover:-translate-y-2 
-                          hover:shadow-2xl hover:shadow-green-500/20 
-                          cursor-pointer max-w-sm mx-auto w-full relative z-10">
-              <div className="h-36 bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300 bg-white">
-                <Crown className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
-              </div>
-              <div className="p-4 bg-white relative">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-green-600 transition-colors">
-                  Chess Games Data Analysis
-                </h3>
-                <p className="text-gray-600 text-sm mb-3">
-                  Applying machine learning & data science to analyze 40,000+ chess games and training GPT Chess engine
-                </p>
-                <div className="flex flex-wrap gap-1 mb-3">
-                  <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">Machine Learning</span>
-                  <span className="px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-600">Data Analysis</span>
-                </div>
-                <a href="/research/ml-chess-analysis" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
-                  View Project
-                  <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            {/* Unity Game Project */}
-            <div className="group rounded-xl overflow-hidden bg-white shadow-lg 
-                          transition-all duration-300 
-                          hover:scale-[1.02] hover:-translate-y-2 
-                          hover:shadow-2xl hover:shadow-purple-500/20 
-                          cursor-pointer max-w-sm mx-auto w-full relative z-10">
-              <div className="h-36 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300 bg-white">
-                <Gamepad2 className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
-              </div>
-              <div className="p-4 bg-white relative">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-purple-600 transition-colors">
-                  AI-driven 3D Unity Game
-                </h3>
-                <p className="text-gray-600 text-sm mb-3">
-                  Integrating large language models to enhance NPC dialogue and combat encounters in original 3D unity game
-                </p>
-                <div className="flex flex-wrap gap-1 mb-3">
-                  <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">Unity</span>
-                  <span className="px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-600">C#</span>
-                </div>
-                <a href="/projects/llm-video-game" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
-                  View Project
-                  <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Second Row - 2 Projects */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-2xl mx-auto px-4 lg:px-0">
-            {/* SelfHelp AI */}
-            <div className="group rounded-xl overflow-hidden bg-white shadow-lg 
-                          transition-all duration-300 
-                          hover:scale-[1.02] hover:-translate-y-2 
-                          hover:shadow-2xl hover:shadow-pink-500/20 
-                          cursor-pointer max-w-sm mx-auto w-full relative z-10">
-              <div className="h-36 bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300 bg-white">
-                <Activity className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
-              </div>
-              <div className="p-4 bg-white relative">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-pink-600 transition-colors">
-                  SelfHelp AI
-                </h3>
-                <p className="text-gray-600 text-sm mb-3">
-                  Full-stack iOS app, integrating user data to create AI chatbots for self improvement. 200+ App Store downloads
-                </p>
-                <div className="flex flex-wrap gap-1 mb-3">
-                  <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">React Native</span>
-                  <span className="px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-600">OpenAI</span>
-                </div>
-                <a href="/projects/ios-app" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
-                  View Project
-                  <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            {/* Voice-Controlled Robot */}
-            <div className="group rounded-xl overflow-hidden bg-white shadow-lg 
-                          transition-all duration-300 
-                          hover:scale-[1.02] hover:-translate-y-2 
-                          hover:shadow-2xl hover:shadow-violet-500/20 
-                          cursor-pointer max-w-sm mx-auto w-full relative z-10">
-              <div className="h-36 bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center p-6 group-hover:scale-105 transition-transform duration-300 bg-white">
-                <Bot className="w-12 h-12 text-white group-hover:rotate-12 transition-transform duration-300" />
-              </div>
-              <div className="p-4 bg-white relative">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-violet-600 transition-colors">
-                  Multimodal Autonomous Robot
-                </h3>
-                <p className="text-gray-600 text-sm mb-3">
-                  Raspberry Pi-powered robot that utilizes NLP and computer vision to respond to user commands
-                </p>
-                <div className="flex flex-wrap gap-1 mb-3">
-                  <span className="px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-600">Python</span>
-                  <span className="px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-600">Raspberry Pi</span>
-                </div>
-                <a href="/projects/agentic-robot" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center group-hover:translate-x-2 transition-transform">
-                  View Project
-                  <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </a>
-              </div>
             </div>
           </div>
         </div>

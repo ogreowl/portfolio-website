@@ -150,6 +150,9 @@ export default function Expert3DScatter({ height = '400px' }: Expert3DScatterPro
           config={{ responsive: true, displayModeBar: false }}
         />
       </div>
+      <p className="text-gray-600 text-sm text-center mt-1">
+        3D visualization of expert witness embeddings in UMAP
+      </p>
     </div>
   );
 } 
